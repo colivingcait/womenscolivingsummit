@@ -41,15 +41,15 @@ export default function WCS2025Page() {
             <h2>What the room <em>looked like.</em></h2>
           </div>
           <div className="gallery-grid rv d1">
-            <div className="gallery-item tall">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item tall">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
+            <div className="gallery-item tall has-img" style={{ backgroundImage: "url('/wide-group1.png')" }} />
+            <div className="gallery-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs1.png')" }} />
+            <div className="gallery-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs2.png')" }} />
+            <div className="gallery-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs3.png')" }} />
+            <div className="gallery-item tall has-img" style={{ backgroundImage: "url('/wide-group2.png')" }} />
+            <div className="gallery-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs4.png')" }} />
+            <div className="gallery-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs5.png')" }} />
+            <div className="gallery-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs6.png')" }} />
+            <div className="gallery-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs7.png')" }} />
           </div>
         </div>
       </section>
@@ -84,10 +84,10 @@ export default function WCS2025Page() {
       </section>
 
       <div className="photo-strip">
-        <div className="photo-strip-item">Photo</div>
-        <div className="photo-strip-item">Photo</div>
-        <div className="photo-strip-item">Photo</div>
-        <div className="photo-strip-item">Photo</div>
+        <div className="photo-strip-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs2.png')" }} />
+        <div className="photo-strip-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs4.png')" }} />
+        <div className="photo-strip-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs6.png')" }} />
+        <div className="photo-strip-item has-img" style={{ backgroundImage: "url('/wcs2025/wcs7.png')" }} />
       </div>
 
       <section className="tst">

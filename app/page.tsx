@@ -13,6 +13,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="hero">
+        <div className="hero-bg" />
         <div className="hero-i">
           <div className="ey ey-c" style={{ opacity: 0, animation: 'hr .8s cubic-bezier(.16,1,.3,1) .05s forwards' }}>
             October 16 – 17, 2026 · Atlanta, Georgia
@@ -46,10 +47,10 @@ export default function Home() {
 
       {/* PHOTO STRIP */}
       <div className="photo-strip">
-        <div className="photo-strip-item">Group Photo 1</div>
-        <div className="photo-strip-item">Group Photo 2</div>
-        <div className="photo-strip-item">Group Photo 3</div>
-        <div className="photo-strip-item">Group Photo 4</div>
+        <div className="photo-strip-item has-img" style={{ backgroundImage: "url('/homepagestrip/homepage1.png')" }} />
+        <div className="photo-strip-item has-img" style={{ backgroundImage: "url('/homepagestrip/homepage2.png')" }} />
+        <div className="photo-strip-item has-img" style={{ backgroundImage: "url('/homepagestrip/homepage3.png')" }} />
+        <div className="photo-strip-item has-img" style={{ backgroundImage: "url('/homepagestrip/homepage4.png')" }} />
       </div>
 
       {/* ABOUT */}
@@ -75,10 +76,10 @@ export default function Home() {
               <Link href="/about" className="btn btn-o">Our Full Story</Link>
             </div>
             <div className="about-img rv d2">
-              <div className="about-img-inner">
-                <span>Founders Photo</span>
-                Caitlyn &amp; Jasmine
-              </div>
+              <div
+                className="about-img-inner has-img"
+                style={{ backgroundImage: "url('/founders-together.png')" }}
+              />
             </div>
           </div>
         </div>
@@ -164,10 +165,10 @@ export default function Home() {
 
       {/* COMMUNITY PHOTO */}
       <div className="comm-photo">
-        <div className="comm-photo-inner">
-          <span>Wide Group Photo</span>
-          Full-width community photo from WCS
-        </div>
+        <div
+          className="comm-photo-inner has-img"
+          style={{ backgroundImage: "url('/wide-group1.png')" }}
+        />
         <div className="comm-photo-overlay"></div>
       </div>
 

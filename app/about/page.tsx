@@ -61,7 +61,11 @@ export default function AboutPage() {
           </div>
           <div className="founders-grid">
             <div className="founder-card rv d1">
-              <div className="founder-photo"><span>Headshot</span>Caitlyn Verdugo</div>
+              <div
+                className="founder-photo has-img"
+                style={{ backgroundImage: "url('/caitlyn-headshot.png')" }}
+              />
+
               <h3>Caitlyn Verdugo <em>| Coliving Cait</em></h3>
               <div className="founder-title">Co-Founder, Women&apos;s Coliving Summit</div>
               <div className="founder-bio">
