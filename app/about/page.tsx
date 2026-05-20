@@ -162,7 +162,7 @@ export default function AboutPage() {
           <h2>Ready to join us in <em>the room?</em></h2>
           <p>150 women. Two days. The strategies, partnerships, and community you need to build wealth through coliving.</p>
           <div className="cg">
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986277433272?aff=oddtdtcreator" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <Link href="/sponsors" className="btn btn-o">Become a Sponsor</Link>
           </div>
         </div>

@@ -91,7 +91,7 @@ export default function SpeakersPage() {
           <h2>Build the room.<br /><em>Own the future.</em></h2>
           <p>Secure your seat and be in the room when these women take the stage.</p>
           <div className="cg">
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986277433272?aff=oddtdtcreator" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <Link href="/agenda" className="btn btn-ol">View the Agenda</Link>
           </div>
         </div>

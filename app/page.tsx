@@ -25,7 +25,7 @@ export default function Home() {
             portfolios through shared housing.
           </p>
           <div className="hero-c">
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986277433272?aff=oddtdtcreator" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <a href="#about" className="btn btn-o">Learn More</a>
           </div>
           <div className="jn">
@@ -318,7 +318,7 @@ export default function Home() {
             through coliving — all in one room in Atlanta.
           </p>
           <div className="cg">
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986277433272?aff=oddtdtcreator" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <button className="btn btn-ol" onClick={openSponsor}>Become a Sponsor</button>
           </div>
         </div>
