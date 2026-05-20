@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women's Coliving Summit 2026 | Women building wealth — one room at a time.</title>
+<meta name="description" content="The Women's Coliving Summit is a two-day conference in Atlanta for women investors and operators building wealth through shared housing. October 16–17, 2026.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════
+   WCS 2026 — DESIGN SYSTEM
+   Deep Wine + Warm Gold + Ivory
+   "1 anchor + 1 accent + 2 neutrals" — restraint is luxury
+   ═══════════════════════════════════════════════════ */
+:root {
+  --wine: #58303d;
+
+  --gold: #C69B3C;
+  --gold-light: #DCBE7B;
+  --gold-dark: #9E7A2A;
+  --gold-pale: #EDE0C3;
+
+  --ivory: #F4EADE;
+  --cream: #FAF7F2;
+  --white: #FFFFFF;
+  --blush: #F0E3DC;
+
+  --text: #3D2B30;
+  --text-mid: #7A6269;
+  --text-light: #A8949A;
+
+  --border: rgba(196,149,90,0.2);
+  --border-wine: rgba(88,48,61,0.08);
+
+  --font-h: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-b);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ══════════ TYPOGRAPHY ══════════ */
+h1, h2, h3 {
+  font-family: var(--font-h);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--wine);
+}
+h1 { font-size: clamp(44px, 5.8vw, 72px); }
+h2 { font-size: clamp(34px, 4.2vw, 56px); }
+h3 { font-size: clamp(20px, 2vw, 26px); }
+h1 em, h2 em, h3 em { font-style: italic; font-weight: 300; color: var(--gold); }
+
+/* ══════════ EYEBROW ══════════ */
+.ey {
+  font-family: var(--font-b);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.ey::before { content: ''; width: 20px; height: 1px; background: var(--gold); }
+.ey-c { justify-content: center; }
+.ey-c::before { display: none; }
+.ey-l { color: var(--gold-light); }
+.ey-l::before { background: var(--gold-light); }
+
+/* ══════════ BUTTONS ══════════ */
+.btn {
+  display: inline-block; font-family: var(--font-b);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 16px 38px; border: none; cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(.16,1,.3,1);
+}
+.btn-g { background: var(--gold); color: var(--white); }
+.btn-g:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(198,155,60,0.25); }
+.btn-w { background: var(--wine); color: var(--ivory); }
+.btn-w:hover { background: #3d2029; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(88,48,61,0.2); }
+.btn-o { background: transparent; border: 1px solid var(--gold); color: var(--gold-dark); }
+.btn-o:hover { background: var(--gold); color: var(--white); transform: translateY(-2px); }
+.btn-ol { background: transparent; border: 1px solid rgba(255,255,255,0.3); color: var(--ivory); }
+.btn-ol:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+
+/* ══════════ NAV ══════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  transition: all 0.4s cubic-bezier(.16,1,.3,1);
+}
+nav.s { background: rgba(255,255,255,0.96); box-shadow: 0 1px 0 var(--border-wine); }
+.ni { max-width: 1200px; margin: 0 auto; padding: 0 60px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+.nl { font-family: var(--font-h); font-size: 19px; font-weight: 500; color: var(--wine); text-decoration: none; }
+.nl em { font-style: italic; color: var(--gold); font-weight: 400; }
+.nk { display: flex; align-items: center; gap: 36px; list-style: none; }
+.nk a:not(.btn) { font-size: 11px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wine); text-decoration: none; transition: color 0.3s; }
+.nk a:not(.btn):hover { color: var(--gold); }
+.nt { display: none; width: 24px; height: 20px; position: relative; background: none; border: none; cursor: pointer; z-index: 101; }
+.nt span { position: absolute; left: 0; width: 24px; height: 1.5px; background: var(--wine); transition: all 0.35s cubic-bezier(.16,1,.3,1); }
+.nt span:nth-child(1) { top: 0; }
+.nt span:nth-child(2) { top: 9px; }
+.nt span:nth-child(3) { top: 18px; }
+.nt.open span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+.nt.open span:nth-child(2) { opacity: 0; }
+.nt.open span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
+
+/* ══════════ REVEAL ══════════ */
+.rv { opacity: 0; transform: translateY(40px); transition: opacity 0.85s cubic-bezier(.16,1,.3,1), transform 0.85s cubic-bezier(.16,1,.3,1); }
+.rv.v { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: .12s; } .d2 { transition-delay: .24s; } .d3 { transition-delay: .36s; } .d4 { transition-delay: .48s; }
+
+@keyframes hr { to { opacity: 1; transform: translateY(0); } }
+
+/* ══════════ HERO ══════════ */
+.hero { padding: 180px 60px 100px; background: var(--white); text-align: center; position: relative; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 800px; height: 400px; background: radial-gradient(ellipse, rgba(198,155,60,0.06) 0%, transparent 70%); pointer-events: none; }
+.hero-i { max-width: 780px; margin: 0 auto; position: relative; z-index: 2; }
+.hero h1 { margin-bottom: 24px; opacity: 0; transform: translateY(30px); animation: hr 1s cubic-bezier(.16,1,.3,1) 0.2s forwards; }
+.hero-b { font-size: 18px; line-height: 1.8; color: var(--text-mid); max-width: 520px; margin: 0 auto 16px; opacity: 0; transform: translateY(20px); animation: hr 0.85s cubic-bezier(.16,1,.3,1) 0.5s forwards; }
+.hero-s { font-size: 14px; color: var(--text-light); margin-bottom: 44px; opacity: 0; animation: hr 0.8s cubic-bezier(.16,1,.3,1) 0.65s forwards; }
+.hero-c { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; opacity: 0; animation: hr 0.8s cubic-bezier(.16,1,.3,1) 0.8s forwards; }
+
+/* Journey nav */
+.jn { display: flex; justify-content: center; gap: 56px; margin-top: 64px; opacity: 0; animation: hr 0.8s cubic-bezier(.16,1,.3,1) 1s forwards; }
+.js { text-decoration: none; text-align: center; position: relative; padding-bottom: 18px; }
+.js::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 1.5px; background: var(--gold); transition: width 0.4s cubic-bezier(.16,1,.3,1); }
+.js:hover::after { width: 100%; }
+.js-l { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.js-t { font-family: var(--font-h); font-size: 17px; font-weight: 500; color: var(--wine); }
+
+/* ══════════ PHOTO STRIP ══════════ */
+.photo-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.photo-strip-item { aspect-ratio: 16/10; background: var(--ivory); display: flex; align-items: center; justify-content: center; font-family: var(--font-h); font-size: 14px; font-style: italic; color: var(--text-light); overflow: hidden; position: relative; border-right: 1px solid var(--white); }
+.photo-strip-item:last-child { border-right: none; }
+.photo-strip-item::after { content: ''; position: absolute; inset: 0; background: var(--wine); opacity: 0; transition: opacity 0.5s; }
+.photo-strip-item:hover::after { opacity: 0.08; }
+
+/* ══════════ SECTIONS ══════════ */
+section { padding: 100px 60px; }
+.si { max-width: 1100px; margin: 0 auto; }
+.sb { font-size: 16px; line-height: 1.85; color: var(--text-mid); max-width: 540px; }
+
+/* ══════════ ABOUT ══════════ */
+.about { background: var(--cream); }
+.about-g { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-t p { font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--text-mid); margin-bottom: 20px; }
+.about-t p:last-of-type { margin-bottom: 36px; }
+.about-img { position: relative; }
+.about-img-inner { width: 100%; aspect-ratio: 4/5; background: var(--ivory); border: 0.5px solid var(--border); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; font-family: var(--font-h); font-size: 15px; font-style: italic; color: var(--text-light); }
+.about-img-inner span { font-family: var(--font-b); font-size: 10px; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+.about-img::after { content: ''; position: absolute; top: -14px; right: -14px; width: 100%; height: 100%; border: 1px solid var(--border); z-index: -1; }
+
+/* ══════════ HIGHLIGHTS — WINE BG ══════════ */
+.hl { background: var(--wine); }
+.hl h2 { color: var(--ivory); } .hl h2 em { color: var(--gold-light); }
+.hl .sb { color: rgba(244,234,222,0.5); }
+.hl-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(198,155,60,0.12); margin-top: 56px; }
+.hl-c { background: var(--wine); padding: 2.25rem; transition: all 0.5s cubic-bezier(.16,1,.3,1); position: relative; overflow: hidden; }
+.hl-c::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(198,155,60,0.07), transparent 60%); opacity: 0; transition: opacity 0.4s; pointer-events: none; }
+.hl-c:hover::before { opacity: 1; }
+.hl-c:hover { background: rgba(88,48,61,0.3); }
+.hl-n { font-family: var(--font-h); font-size: 2rem; font-weight: 500; color: var(--gold-light); line-height: 1; margin-bottom: 14px; opacity: 0.6; }
+.hl-c h3 { font-size: 15px; font-weight: 500; font-family: var(--font-b); color: var(--ivory); letter-spacing: 0; margin-bottom: 10px; line-height: 1.4; }
+.hl-c p { font-size: 13px; font-weight: 300; line-height: 1.8; color: rgba(244,234,222,0.48); }
+
+/* ══════════ AGENDA ══════════ */
+.agd { background: var(--cream); }
+.agd-note { font-size: 13px; font-weight: 400; color: var(--gold-dark); background: var(--gold-pale); padding: 14px 20px; margin-bottom: 48px; display: inline-block; }
+.agd-note strong { font-weight: 600; }
+.agd-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+.agd-day { background: var(--cream); padding: 0; }
+.agd-hdr { background: var(--wine); padding: 2rem 2.25rem; }
+.agd-hdr .day-label { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 6px; }
+.agd-hdr h3 { font-family: var(--font-h); font-size: 26px; font-weight: 400; color: var(--ivory); letter-spacing: -0.01em; }
+.agd-body { padding: 2rem 2.25rem; }
+.agd-block { margin-bottom: 28px; }
+.agd-block:last-child { margin-bottom: 0; }
+.agd-time { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; color: var(--gold-dark); margin-bottom: 8px; }
+.agd-item { padding-left: 16px; border-left: 1.5px solid var(--border); margin-bottom: 10px; }
+.agd-item:last-child { margin-bottom: 0; }
+.agd-item h4 { font-family: var(--font-b); font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.4; letter-spacing: 0; }
+.agd-item p { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.6; margin-top: 3px; }
+.agd-break { font-size: 13px; font-weight: 300; font-style: italic; color: var(--text-light); padding-left: 16px; }
+
+/* ══════════ NUMBERS ══════════ */
+.nums { background: var(--ivory); padding: 80px 60px; }
+.nums-g { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; max-width: 1100px; margin: 0 auto; }
+.nums-i .n { font-family: var(--font-h); font-size: clamp(44px, 5vw, 64px); font-weight: 400; color: var(--wine); line-height: 1; letter-spacing: -0.02em; }
+.nums-i .nl2 { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-top: 10px; }
+
+/* ══════════ COMMUNITY PHOTO ══════════ */
+.comm-photo { position: relative; overflow: hidden; }
+.comm-photo-inner { width: 100%; aspect-ratio: 3/1; background: var(--blush); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; font-family: var(--font-h); font-size: 18px; font-style: italic; color: var(--text-light); }
+.comm-photo-inner span { font-family: var(--font-b); font-size: 10px; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+.comm-photo-overlay { position: absolute; inset: 0; background: linear-gradient(to right, var(--wine) 0%, transparent 40%, transparent 60%, var(--wine) 100%); opacity: 0.15; pointer-events: none; }
+
+/* ══════════ AUDIENCE ══════════ */
+.aud { background: var(--white); }
+.aud-g { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border-wine); margin-top: 56px; border: 0.5px solid rgba(88,48,61,0.06); }
+.aud-c { background: var(--white); padding: 2.5rem; transition: all 0.4s cubic-bezier(.16,1,.3,1); }
+.aud-c:hover { background: var(--cream); }
+.aud-c .cl { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.aud-c h3 { margin-bottom: 12px; }
+.aud-c p { font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--text-mid); }
+
+/* ══════════ SPEAKERS ══════════ */
+.spk { background: var(--cream); overflow: hidden; }
+.spk-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; flex-wrap: wrap; gap: 20px; max-width: 1100px; margin-left: auto; margin-right: auto; margin-bottom: 48px; padding: 0 60px; }
+.spk-track { display: flex; gap: 28px; animation: spkScroll 45s linear infinite; width: max-content; }
+.spk-track:hover { animation-play-state: paused; }
+.spk-c { flex-shrink: 0; width: 220px; text-align: center; }
+.spk-ph { width: 100%; aspect-ratio: 1; background: var(--ivory); border: 0.5px solid var(--border); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; font-family: var(--font-h); font-size: 14px; font-style: italic; color: var(--text-light); margin-bottom: 16px; transition: all 0.5s cubic-bezier(.16,1,.3,1); overflow: hidden; }
+.spk-ph span { font-family: var(--font-b); font-size: 9px; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+.spk-c:hover .spk-ph { border-color: var(--gold); box-shadow: 0 12px 32px rgba(198,155,60,0.1); transform: translateY(-4px); }
+.spk-c h3 { font-size: 18px; margin-bottom: 4px; }
+.spk-c p { font-size: 12px; color: var(--text-light); }
+@keyframes spkScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ══════════ TESTIMONIALS — WINE BG ══════════ */
+.tst { background: var(--wine); }
+.tst h2 { color: var(--ivory); } .tst h2 em { color: var(--gold-light); }
+.tst-g { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(198,155,60,0.12); margin-top: 56px; }
+.tc { background: var(--wine); padding: 2.25rem; }
+.tc.f { background: rgba(88,48,61,0.25); }
+.tc-st { color: var(--gold); font-size: 10px; letter-spacing: 3px; margin-bottom: 14px; }
+.tc-q { font-family: var(--font-h); font-size: 17px; font-style: italic; font-weight: 400; line-height: 1.65; color: rgba(244,234,222,0.8); margin-bottom: 24px; }
+.tc-ft { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 0.5px solid rgba(198,155,60,0.15); }
+.tc-a { display: flex; align-items: center; gap: 10px; }
+.tc-av { width: 32px; height: 32px; border-radius: 50%; background: rgba(198,155,60,0.12); border: 1px solid rgba(198,155,60,0.25); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 500; color: var(--gold-light); }
+.tc-nm strong { display: block; font-size: 12px; font-weight: 500; color: var(--ivory); }
+.tc-nm span { font-size: 11px; color: rgba(244,234,222,0.35); }
+.tc-b { font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--gold); opacity: 0.6; }
+
+/* ══════════ SPONSORS ══════════ */
+.spo { background: var(--white); text-align: center; }
+.spo .sb { margin-left: auto; margin-right: auto; }
+.spo-g { display: flex; justify-content: center; gap: 56px; flex-wrap: wrap; margin: 56px 0 40px; }
+.spo-s { width: 150px; height: 60px; border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-light); transition: all 0.3s; }
+.spo-s:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ══════════ SPONSOR MODAL ══════════ */
+.modal-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(61,32,41,0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: flex-start; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.4s cubic-bezier(.16,1,.3,1); padding: 40px 24px; overflow-y: auto; }
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal { background: var(--white); max-width: 520px; width: 100%; padding: 3rem; position: relative; transform: translateY(20px); transition: transform 0.4s cubic-bezier(.16,1,.3,1); margin: auto; flex-shrink: 0; }
+.modal-overlay.open .modal { transform: translateY(0); }
+.modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; cursor: pointer; font-size: 20px; color: var(--text-light); transition: color 0.3s; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+.modal-close:hover { color: var(--wine); }
+.modal .ey { margin-bottom: 12px; }
+.modal h3 { font-size: 28px; margin-bottom: 8px; }
+.modal .modal-sub { font-size: 14px; color: var(--text-mid); line-height: 1.7; margin-bottom: 28px; }
+.modal label { display: block; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 6px; }
+.modal input, .modal textarea { width: 100%; font-family: var(--font-b); font-size: 14px; font-weight: 300; padding: 12px 16px; border: 0.5px solid var(--border); background: var(--cream); color: var(--text); outline: none; transition: border-color 0.3s; margin-bottom: 16px; }
+.modal input:focus, .modal textarea:focus { border-color: var(--gold); }
+.modal textarea { height: 80px; resize: vertical; }
+.modal .btn { width: 100%; text-align: center; margin-top: 4px; }
+
+/* ══════════ FAQ ══════════ */
+.faq { background: var(--cream); }
+.faq-list { max-width: 760px; margin-top: 48px; }
+.faq-item { border-bottom: 0.5px solid var(--border); }
+.faq-item:first-child { border-top: 0.5px solid var(--border); }
+.faq-q { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; cursor: pointer; gap: 16px; }
+.faq-q h3 { font-size: 19px; font-weight: 400; letter-spacing: -0.01em; transition: color 0.3s; }
+.faq-q:hover h3 { color: var(--gold); }
+.faq-icon { font-size: 18px; color: var(--gold); flex-shrink: 0; transition: transform 0.4s cubic-bezier(.16,1,.3,1); }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(.16,1,.3,1), padding 0.5s cubic-bezier(.16,1,.3,1); }
+.faq-item.open .faq-a { max-height: 400px; }
+.faq-a-inner { padding: 0 0 24px; font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--text-mid); }
+.faq-a-inner a { color: var(--gold-dark); text-decoration: none; border-bottom: 1px solid var(--border); transition: border-color 0.3s; }
+.faq-a-inner a:hover { border-color: var(--gold); }
+
+/* ══════════ FINAL CTA ══════════ */
+.cta-f { background: var(--wine); text-align: center; padding: 120px 60px; position: relative; overflow: hidden; }
+.cta-f::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(198,155,60,0.06) 0%, transparent 60%); pointer-events: none; }
+.cta-f .si { position: relative; z-index: 2; }
+.cta-f h2 { color: var(--ivory); margin-bottom: 20px; }
+.cta-f h2 em { color: var(--gold-light); }
+.cta-f .cb { font-size: 16px; color: rgba(244,234,222,0.45); max-width: 500px; margin: 0 auto 44px; line-height: 1.85; }
+.cta-f .cg { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+/* ══════════ FOOTER ══════════ */
+footer { background: #3d2029; padding: 64px 60px 40px; color: rgba(244,234,222,0.4); }
+.fi { max-width: 1100px; margin: 0 auto; }
+.ft { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.fb-logo { font-family: var(--font-h); font-size: 18px; font-weight: 500; color: var(--ivory); margin-bottom: 10px; }
+.fb-logo em { font-style: italic; color: var(--gold); }
+.fb-p { font-size: 14px; font-weight: 300; line-height: 1.7; max-width: 250px; }
+.fc h4 { font-size: 10px; font-weight: 500; font-family: var(--font-b); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.fc ul { list-style: none; }
+.fc a { display: block; font-size: 14px; font-weight: 300; color: rgba(244,234,222,0.4); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
+.fc a:hover { color: var(--ivory); }
+.fbot { border-top: 0.5px solid rgba(198,155,60,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+.fbot a { color: rgba(244,234,222,0.4); text-decoration: none; transition: color 0.3s; }
+.fbot a:hover { color: var(--gold); }
+
+/* Footer email signup */
+.footer-signup { border-top: 0.5px solid rgba(198,155,60,0.1); padding: 32px 0; margin-bottom: 32px; }
+.footer-signup h4 { font-size: 10px; font-weight: 500; font-family: var(--font-b); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.footer-signup p { font-size: 14px; font-weight: 300; color: rgba(244,234,222,0.4); margin-bottom: 16px; max-width: 400px; }
+.signup-form { display: flex; gap: 8px; max-width: 500px; flex-wrap: wrap; }
+.signup-form input { flex: 1; min-width: 160px; font-family: var(--font-b); font-size: 13px; font-weight: 300; padding: 12px 16px; border: 0.5px solid rgba(198,155,60,0.25); background: rgba(255,255,255,0.06); color: var(--ivory); outline: none; transition: border-color 0.3s; }
+.signup-form input::placeholder { color: rgba(244,234,222,0.3); }
+.signup-form input:focus { border-color: var(--gold); }
+.signup-form button { font-family: var(--font-b); font-size: 11px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; padding: 12px 24px; background: var(--gold); color: #fff; border: none; cursor: pointer; transition: all 0.3s; }
+.signup-form button:hover { background: var(--gold-dark); }
+
+/* Exit-intent popup */
+.exit-overlay { position: fixed; inset: 0; z-index: 300; background: rgba(61,32,41,0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: flex-start; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.4s cubic-bezier(.16,1,.3,1); padding: 60px 24px; overflow-y: auto; }
+.exit-overlay.open { opacity: 1; pointer-events: all; }
+.exit-box { background: var(--white); max-width: 480px; width: 100%; padding: 3rem; text-align: center; position: relative; transform: translateY(20px); transition: transform 0.4s cubic-bezier(.16,1,.3,1); margin: auto; flex-shrink: 0; }
+.exit-overlay.open .exit-box { transform: translateY(0); }
+.exit-box .modal-close { position: absolute; top: 16px; right: 16px; }
+.exit-box h3 { font-size: 32px; margin-bottom: 12px; }
+.exit-box p { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--text-mid); margin-bottom: 24px; }
+.exit-form { display: flex; flex-direction: column; gap: 10px; }
+.exit-form input { font-family: var(--font-b); font-size: 14px; font-weight: 300; padding: 14px 16px; border: 0.5px solid var(--border); background: var(--cream); color: var(--text); outline: none; transition: border-color 0.3s; text-align: center; }
+.exit-form input:focus { border-color: var(--gold); }
+.exit-form button { font-family: var(--font-b); font-size: 11px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; padding: 16px; background: var(--gold); color: #fff; border: none; cursor: pointer; transition: all 0.3s; }
+.exit-form button:hover { background: var(--gold-dark); }
+.exit-skip { font-size: 12px; color: var(--text-light); margin-top: 16px; cursor: pointer; background: none; border: none; transition: color 0.3s; }
+.exit-skip:hover { color: var(--wine); }
+
+/* ══════════ RESPONSIVE ══════════ */
+@media (max-width: 1024px) {
+  .nk { display: none; position: fixed; inset: 0; z-index: 99; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+  .nk.open { display: flex; }
+  .nk.open a:not(.btn) { font-size: 14px; letter-spacing: 0.18em; color: var(--wine); }
+  .nt { display: block; }
+  section { padding: 80px 32px; }
+  .ni { padding: 0 32px; }
+  .hero { padding: 140px 32px 80px; }
+  .about-g { grid-template-columns: 1fr; gap: 48px; }
+  .hl-g { grid-template-columns: 1fr; background: var(--wine); gap: 0; }
+  .hl-c { border-bottom: 0.5px solid rgba(198,155,60,0.1); }
+  .agd-cols { grid-template-columns: 1fr; }
+  .nums-g { grid-template-columns: repeat(2, 1fr); }
+  .aud-g { grid-template-columns: 1fr; }
+  .tst-g { grid-template-columns: 1fr; background: var(--wine); }
+  .ft { grid-template-columns: 1fr 1fr; }
+  .photo-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 120px 24px 64px; }
+  section { padding: 64px 24px; }
+  .nums { padding: 64px 24px; }
+  .jn { gap: 24px; flex-wrap: wrap; }
+  .ft { grid-template-columns: 1fr; gap: 32px; }
+  .fbot { flex-direction: column; gap: 12px; text-align: center; }
+  .cta-f { padding: 80px 24px; }
+  .photo-strip { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="nav">
+  <div class="ni">
+    <a href="#" class="nl">Women's Coliving <em>Summit</em></a>
+    <button class="nt" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nk" id="nk">
+      <li><a href="about.html">About</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="speakers.html">Speakers</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="wcs-2025.html">WCS 2025</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="https://www.eventbrite.com" target="_blank" class="btn btn-g" style="padding:12px 28px">Get My Ticket</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-i">
+    <div class="ey ey-c" style="opacity:0;animation:hr .8s cubic-bezier(.16,1,.3,1) .05s forwards">October 16 – 17, 2026 · Atlanta, Georgia</div>
+    <h1>Women's Coliving<br><em>Summit</em></h1>
+    <p class="hero-b">Women building wealth — one room at a time.</p>
+    <p class="hero-s">Two days of panels, workshops, and intentional community for women building real estate portfolios through shared housing.</p>
+    <div class="hero-c">
+      <a href="https://www.eventbrite.com" target="_blank" class="btn btn-g">Get My Ticket</a>
+      <a href="#about" class="btn btn-o">Learn More</a>
+    </div>
+    <div class="jn">
+      <a href="#highlights" class="js">
+        <div class="js-l">Oct 16 – 17</div>
+        <div class="js-t">Atlanta, Georgia</div>
+      </a>
+      <a href="#speakers" class="js">
+        <div class="js-l">15+ Leaders</div>
+        <div class="js-t">Women Who've Built It</div>
+      </a>
+      <a href="#sponsors" class="js">
+        <div class="js-l">Community</div>
+        <div class="js-t">150 Women Strong</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PHOTO STRIP ═══ -->
+<div class="photo-strip">
+  <div class="photo-strip-item">Group Photo 1</div>
+  <div class="photo-strip-item">Group Photo 2</div>
+  <div class="photo-strip-item">Group Photo 3</div>
+  <div class="photo-strip-item">Group Photo 4</div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="about">
+  <div class="si">
+    <div class="about-g">
+      <div class="about-t rv">
+        <div class="ey">About the Summit</div>
+        <h2>A room built by women,<br><em>for women.</em></h2>
+        <p>Coliving is one of the most powerful wealth-building tools in real estate — and women are leading the way. The Women's Coliving Summit exists to give those women a room built specifically for them. A space to learn from operators who've done it, build relationships that turn into partnerships, and walk away with the clarity and confidence to take the next step.</p>
+        <p>WCS isn't about what women can't do in this industry. It's about what happens when we create space to do it together — openly, strategically, and on our own terms. Whether you're exploring your first deal or scaling a portfolio, this is where you belong.</p>
+        <a href="about.html" class="btn btn-o">Our Full Story</a>
+      </div>
+      <div class="about-img rv d2">
+        <div class="about-img-inner">
+          <span>Founders Photo</span>
+          Caitlyn & Jasmine
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HIGHLIGHTS ═══ -->
+<section class="hl" id="highlights">
+  <div class="si">
+    <div class="rv">
+      <div class="ey ey-l">What to Expect</div>
+      <h2>Two days that change<br>how you <em>build.</em></h2>
+      <p class="sb">Every session, connection, and conversation is designed to move your coliving business forward.</p>
+    </div>
+    <div class="hl-g">
+      <div class="hl-c rv d1"><div class="hl-n">01</div><h3>From the Stage</h3><p>Intimate keynotes from women who've built real coliving portfolios — sharing the decisions, the numbers, and the lessons that don't make it to social media.</p></div>
+      <div class="hl-c rv d2"><div class="hl-n">02</div><h3>The Conversations That Matter</h3><p>Curated panel discussions where operators, investors, and industry leaders go deep on financing, acquisitions, scaling, and the future of shared housing.</p></div>
+      <div class="hl-c rv d3"><div class="hl-n">03</div><h3>Rooms Within the Room</h3><p>Small-group workshops and breakout sessions designed for doing, not just listening. Leave with frameworks, 90-day plans, and strategies you can put to work the week you get home.</p></div>
+      <div class="hl-c rv d1"><div class="hl-n">04</div><h3>Connections by Design</h3><p>This isn't a networking happy hour. It's 150 women who share your ambition, your challenges, and your language — building partnerships and accountability that last far beyond the weekend.</p></div>
+      <div class="hl-c rv d2"><div class="hl-n">05</div><h3>The Tools Behind the Business</h3><p>Meet the platforms, services, and companies purpose-built for coliving operators — from property management to creative financing to furnishing at scale.</p></div>
+      <div class="hl-c rv d3"><div class="hl-n">06</div><h3>She Leads Access</h3><p>Your ticket unlocks membership to She Leads Coliving — a private, year-round community of women investors who keep building together long after the summit ends.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AGENDA ═══ -->
+<section class="agd" id="agenda">
+  <div class="si">
+    <div class="rv">
+      <div class="ey">The Agenda</div>
+      <h2>Two days, one <em>mission.</em></h2>
+      <p class="sb">From your first deal to scaling across markets — every session is designed to meet you where you are and move you forward.</p>
+    </div>
+    <div class="agd-note rv d1"><strong>Note:</strong> This is the WCS 2025 agenda. The 2026 agenda will be announced this summer — expect the same intentional structure with fresh content and speakers.</div>
+    <div class="agd-cols rv d2">
+      <!-- DAY ONE -->
+      <div class="agd-day">
+        <div class="agd-hdr">
+          <div class="day-label">Day One</div>
+          <h3>Foundation & First Deals</h3>
+        </div>
+        <div class="agd-body">
+          <div class="agd-block">
+            <div class="agd-time">8:00 – 9:00 AM · Check-In & Welcome</div>
+            <div class="agd-break">Grab your badge, a coffee, and start making connections.</div>
+          </div>
+          <div class="agd-block">
+            <div class="agd-time">9:00 AM – 12:00 PM · Morning Sessions</div>
+            <div class="agd-item"><h4>Mindset & Setting the Stage</h4><p>Kick off strong with the right foundation.</p></div>
+            <div class="agd-item"><h4>Women on the Frontlines of Housing</h4><p>Exploring affordability & opportunity.</p></div>
+            <div class="agd-item"><h4>Building Impact</h4><p>How value-add strategies create sustainable success.</p></div>
+            <div class="agd-item"><h4>Coliving Process Overview</h4><p>Unpacking what a real deal looks like start to finish.</p></div>
+          </div>
+          <div class="agd-block">
+            <div class="agd-time">12:30 – 2:00 PM · Lunch Break</div>
+            <div class="agd-break">Network over lunch and connect with fellow attendees.</div>
+          </div>
+          <div class="agd-block">
+            <div class="agd-time">2:00 – 5:00 PM · Afternoon Sessions</div>
+            <div class="agd-item"><h4>Financing Deep Dive</h4><p>DSCR loans and creative approaches.</p></div>
+            <div class="agd-item"><h4>Acquisitions</h4><p>What to know before you grow.</p></div>
+            <div class="agd-item"><h4>Small Group Breakouts</h4><p>Accessing capital, building your team, creative financing.</p></div>
+            <div class="agd-item"><h4>Day One Wrap-Up</h4><p>Key takeaways and action items.</p></div>
+          </div>
+          <div class="agd-block">
+            <div class="agd-time">5:00 PM · Evening Social (Optional)</div>
+            <div class="agd-break">Wind down with cocktails, conversations, and connections.</div>
+          </div>
+        </div>
+      </div>
+      <!-- DAY TWO -->
+      <div class="agd-day">
+        <div class="agd-hdr">
+          <div class="day-label">Day Two</div>
+          <h3>Scaling & Strategy</h3>
+        </div>
+        <div class="agd-body">
+          <div class="agd-block">
+            <div class="agd-time">9:00 – 9:30 AM · Check-In & Networking</div>
+            <div class="agd-break">Ease into the day with coffee and fresh conversations.</div>
+          </div>
+          <div class="agd-block">
+            <div class="agd-time">9:30 AM – 12:00 PM · Morning Sessions</div>
+            <div class="agd-item"><h4>Coliving Arbitrage</h4><p>Leverage existing properties for growth without purchasing them.</p></div>
+            <div class="agd-item"><h4>Property Management Systems</h4><p>People, processes, and platforms that work.</p></div>
+            <div class="agd-item"><h4>Operations in Action</h4><p>Scaling without losing control.</p></div>
+          </div>
+          <div class="agd-block">
+            <div class="agd-time">12:00 – 1:30 PM · Lunch Break</div>
+            <div class="agd-break">Network over lunch and connect with fellow attendees.</div>
+          </div>
+          <div class="agd-block">
+            <div class="agd-time">1:30 – 5:00 PM · Afternoon Sessions</div>
+            <div class="agd-item"><h4>Scaling Remotely</h4><p>Expanding across markets with confidence.</p></div>
+            <div class="agd-item"><h4>Multifamily Coliving</h4><p>Taking the model to the next level.</p></div>
+            <div class="agd-item"><h4>Raising Capital</h4><p>Borrowing & lending strategies for confident capital growth.</p></div>
+            <div class="agd-item"><h4>Game Plan Workshop</h4><p>Put your 90-day plan in place.</p></div>
+          </div>
+          <div class="agd-block">
+            <div class="agd-time">5:00 PM · Evening Social (Optional)</div>
+            <div class="agd-break">Wind down the weekend with cocktails, conversations, and solidifying connections.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NUMBERS ═══ -->
+<section class="nums">
+  <div class="nums-g">
+    <div class="nums-i rv"><div class="n">150+</div><div class="nl2">Attendees</div></div>
+    <div class="nums-i rv d1"><div class="n">2</div><div class="nl2">Full Days</div></div>
+    <div class="nums-i rv d2"><div class="n">15+</div><div class="nl2">Leaders & Educators</div></div>
+    <div class="nums-i rv d3"><div class="n">2nd</div><div class="nl2">Annual Summit</div></div>
+  </div>
+</section>
+
+<!-- ═══ COMMUNITY PHOTO ═══ -->
+<div class="comm-photo">
+  <div class="comm-photo-inner">
+    <span>Wide Group Photo</span>
+    Full-width community photo from WCS
+  </div>
+  <div class="comm-photo-overlay"></div>
+</div>
+
+<!-- ═══ AUDIENCE ═══ -->
+<section class="aud">
+  <div class="si">
+    <div class="rv">
+      <div class="ey">Who It's For</div>
+      <h2>Your seat is <em>waiting.</em></h2>
+      <p class="sb">WCS welcomes women at every stage of their coliving journey.</p>
+    </div>
+    <div class="aud-g">
+      <div class="aud-c rv d1"><div class="cl">Stage 01</div><h3>The Explorer</h3><p>You've been researching coliving and you're ready to take the leap. You want to learn the model, run your first numbers, and meet women who've done it.</p></div>
+      <div class="aud-c rv d2"><div class="cl">Stage 02</div><h3>The Builder</h3><p>You have your first property and you're ready to build systems, optimize operations, and scale with confidence and community behind you.</p></div>
+      <div class="aud-c rv d3"><div class="cl">Stage 03</div><h3>The Operator</h3><p>You're running a portfolio and thinking bigger — more properties, new markets, better margins. You want strategic partnerships and high-level conversations.</p></div>
+      <div class="aud-c rv d4"><div class="cl">Stage 04</div><h3>The Ally</h3><p>You work in a field that supports coliving — real estate, lending, furnishing, technology — and you want to connect with this audience directly.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPEAKERS ═══ -->
+<section class="spk" id="speakers">
+  <div class="spk-top rv">
+    <div>
+      <div class="ey">Speakers</div>
+      <h2>Women who've <em>built it.</em></h2>
+    </div>
+    <a href="speakers.html" class="btn btn-o">View All Speakers</a>
+  </div>
+  <div class="spk-track">
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    <div class="spk-c"><div class="spk-ph"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+  </div>
+  <div style="text-align:center;padding:40px 60px 0">
+    <p style="font-size:14px;color:var(--text-mid);margin-bottom:16px;font-weight:300">Have a story, strategy, or framework worth sharing?</p>
+    <button class="btn btn-o" onclick="document.getElementById('spkModal').classList.add('open')">Apply to Speak</button>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="tst">
+  <div class="si">
+    <div class="rv" style="text-align:center;margin-bottom:8px">
+      <div class="ey ey-l ey-c">What Attendees Say</div>
+      <h2>Don't take our <em>word</em> for it.</h2>
+    </div>
+    <div class="tst-g">
+      <div class="tc f rv d1">
+        <div class="tc-st">★ ★ ★ ★ ★</div>
+        <div class="tc-q">"I've been to a lot of real estate events, but this was the first one where every woman in the room actually understood what I'm building. The focus on women doing coliving specifically — not just real estate in general — made the networking feel effortless. I left with real connections, not just business cards."</div>
+        <div class="tc-ft"><div class="tc-a"><div class="tc-av">✦</div><div class="tc-nm"><strong>WCS 2025 Attendee</strong><span>Atlanta, GA</span></div></div><div class="tc-b">Verified Attendee</div></div>
+      </div>
+      <div class="tc rv d2">
+        <div class="tc-st">★ ★ ★ ★ ★</div>
+        <div class="tc-q">"The intimate setting made all the difference. It wasn't stuffy chairs in a row — it was real conversations with women at every stage of the coliving journey. The energy in that room was something I've never experienced at a conference before."</div>
+        <div class="tc-ft"><div class="tc-a"><div class="tc-av">✦</div><div class="tc-nm"><strong>WCS 2025 Attendee</strong><span>Virtual Attendee</span></div></div><div class="tc-b">Verified Attendee</div></div>
+      </div>
+      <div class="tc rv d3">
+        <div class="tc-st">★ ★ ★ ★ ★</div>
+        <div class="tc-q">"The panels were incredibly insightful — real perspectives on scaling operations, building community, and navigating the housing landscape. The breakout sessions gave me focused, hands-on learning and actionable takeaways I could apply to my own business immediately."</div>
+        <div class="tc-ft"><div class="tc-a"><div class="tc-av">✦</div><div class="tc-nm"><strong>WCS 2025 Attendee</strong><span>Coliving Operator</span></div></div><div class="tc-b">Verified Attendee</div></div>
+      </div>
+      <div class="tc f rv d4">
+        <div class="tc-st">★ ★ ★ ★ ★</div>
+        <div class="tc-q">"One of the best real estate events I've ever been to. The speakers, the content, the networking, the venue — all of it was incredibly well put together. From a conversation to reality, these women are trailblazers and powerhouses."</div>
+        <div class="tc-ft"><div class="tc-a"><div class="tc-av">✦</div><div class="tc-nm"><strong>WCS 2025 Attendee</strong><span>Real Estate Investor</span></div></div><div class="tc-b">Verified Attendee</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPONSORS ═══ -->
+<section class="spo" id="sponsors">
+  <div class="si">
+    <div class="rv">
+      <div class="ey ey-c">Our Sponsors</div>
+      <h2>Backed by the best in <em>the business.</em></h2>
+      <p class="sb">WCS 2026 is made possible by sponsors who believe in women-led coliving. Want your brand in front of 150+ serious coliving investors and operators?</p>
+    </div>
+    <div class="spo-g rv">
+      <div class="spo-s">Sponsor Logo</div>
+      <div class="spo-s">Sponsor Logo</div>
+      <div class="spo-s">Sponsor Logo</div>
+      <div class="spo-s">Sponsor Logo</div>
+      <div class="spo-s">Sponsor Logo</div>
+    </div>
+    <div class="rv"><button class="btn btn-w" onclick="document.getElementById('spoModal').classList.add('open')">Become a Sponsor</button></div>
+  </div>
+</section>
+
+<!-- ═══ SPONSOR MODAL ═══ -->
+<div class="modal-overlay" id="spoModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('spoModal').classList.remove('open')">&times;</button>
+    <div class="ey">Sponsor WCS 2026</div>
+    <h3>Let's <em>talk.</em></h3>
+    <p class="modal-sub">Interested in putting your brand in front of 150+ women coliving investors and operators? Fill out the form below and we'll be in touch to schedule a conversation.</p>
+    <label>Your Name</label>
+    <input type="text" id="spo-name" placeholder="First and last name">
+    <label>Company / Brand</label>
+    <input type="text" id="spo-company" placeholder="Your company name">
+    <label>Email</label>
+    <input type="email" id="spo-email" placeholder="you@company.com">
+    <label>Phone (optional)</label>
+    <input type="tel" id="spo-phone" placeholder="(555) 123-4567">
+    <label>Tell us a bit about your interest</label>
+    <textarea id="spo-msg" placeholder="What products or services does your company offer? What type of sponsorship are you interested in?"></textarea>
+    <button class="btn btn-g" onclick="submitSponsor()">Send Inquiry</button>
+  </div>
+</div>
+
+<!-- ═══ SPEAKER MODAL ═══ -->
+<div class="modal-overlay" id="spkModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('spkModal').classList.remove('open')">&times;</button>
+    <div class="ey">Apply to Speak</div>
+    <h3>Share your <em>story.</em></h3>
+    <p class="modal-sub">We're looking for women with real coliving experience — operators, investors, and industry leaders who can teach, inspire, and equip our attendees. Tell us about yourself.</p>
+    <label>Your Name</label>
+    <input type="text" id="spk-name" placeholder="First and last name">
+    <label>Email</label>
+    <input type="email" id="spk-email" placeholder="you@email.com">
+    <label>Company / Brand (if applicable)</label>
+    <input type="text" id="spk-company" placeholder="Your company or brand name">
+    <label>Your Coliving Experience</label>
+    <textarea id="spk-exp" placeholder="How are you involved in coliving? (operator, investor, service provider, etc.)"></textarea>
+    <label>What would you speak about?</label>
+    <textarea id="spk-topic" placeholder="What topic, framework, or story would you share with our attendees?"></textarea>
+    <label>Social / Website (optional)</label>
+    <input type="text" id="spk-social" placeholder="Instagram, LinkedIn, or website URL">
+    <button class="btn btn-g" onclick="submitSpeaker()">Submit Application</button>
+  </div>
+</div>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq" id="faq">
+  <div class="si">
+    <div class="rv">
+      <div class="ey">FAQ</div>
+      <h2>Questions? We've got <em>answers.</em></h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item rv">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3>When and where is WCS 2026?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">WCS 2026 takes place October 16–17 in Atlanta, Georgia. The venue will be announced this summer — follow us on social media or sign up for updates so you're the first to know.</div></div>
+      </div>
+
+      <div class="faq-item rv d2">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3>What's included with my ticket?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Your ticket includes access to all sessions across both days — presentations, panels, workshops, and breakout sessions — plus intentional networking time, lunches, light snacks and refreshments throughout the day, and video recordings of all sessions. In-person attendees also receive membership to the She Leads Coliving community.</div></div>
+      </div>
+
+      <div class="faq-item rv d3">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <h3>Is there a virtual option?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Yes! We'll have a virtual attendee option this year as well. Virtual tickets include live access to the sessions plus full video recordings of both days so you can revisit everything at your own pace.</div></div>
+      </div>
+
+    </div>
+    <div class="rv" style="margin-top:32px"><a href="faq.html" class="btn btn-o">View All FAQs</a></div>
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section class="cta-f">
+  <div class="si rv">
+    <div class="ey ey-l ey-c">October 16 – 17, 2026</div>
+    <h2>Build the room.<br><em>Own the future.</em></h2>
+    <p class="cb">150 women. Two days. The strategies, partnerships, and community you need to build wealth through coliving — all in one room in Atlanta.</p>
+    <div class="cg">
+      <a href="https://www.eventbrite.com" target="_blank" class="btn btn-g">Get My Ticket</a>
+      <button class="btn btn-ol" onclick="document.getElementById('spoModal').classList.add('open')">Become a Sponsor</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div>
+        <div class="fb-logo">Women's Coliving <em>Summit</em></div>
+        <p class="fb-p">Women building wealth — one room at a time.</p>
+      </div>
+      <div class="fc"><h4>Navigate</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="wcs-2025.html">WCS 2025</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul></div>
+      <div class="fc"><h4>Connect</h4><ul>
+        <li><a href="https://instagram.com/colivingcait" target="_blank">Instagram</a></li>
+        <li><a href="#" target="_blank">Facebook</a></li>
+        <li><a href="https://linkedin.com/in/coliving-cait" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:Hello@LustraHouse.com">Email</a></li>
+      </ul></div>
+      <div class="fc"><h4>Get Involved</h4><ul>
+        <li><a href="https://www.eventbrite.com" target="_blank">Buy Tickets</a></li>
+        <li><a href="#" onclick="event.preventDefault();document.getElementById('spoModal').classList.add('open')">Sponsor WCS</a></li>
+        <li><a href="#" onclick="event.preventDefault();document.getElementById('spkModal').classList.add('open')">Apply to Speak</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-signup">
+      <h4>Stay in the Loop</h4>
+      <p>Be the first to know when tickets drop, speakers are announced, and the 2026 agenda goes live.</p>
+      <div class="signup-form">
+        <input type="text" id="fs-name" placeholder="First name">
+        <input type="email" id="fs-email" placeholder="Email address">
+        <button onclick="footerSignup()">Count Me In</button>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Women's Coliving Summit. All rights reserved.</span>
+      <a href="mailto:Hello@LustraHouse.com">Hello@LustraHouse.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ EXIT-INTENT POPUP ═══ -->
+<div class="exit-overlay" id="exitPopup" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="exit-box">
+    <button class="modal-close" onclick="document.getElementById('exitPopup').classList.remove('open')">&times;</button>
+    <div class="ey ey-c" style="margin-bottom:12px">Before You Go</div>
+    <h3>Don't miss <em>this.</em></h3>
+    <p>WCS 2026 is shaping up to be our biggest year yet. Drop your email and we'll keep you posted on speakers, agenda, early bird tickets, and more.</p>
+    <div class="exit-form">
+      <input type="text" id="ex-name" placeholder="First name">
+      <input type="email" id="ex-email" placeholder="Email address">
+      <button onclick="exitSignup()">Keep Me Posted</button>
+    </div>
+    <button class="exit-skip" onclick="document.getElementById('exitPopup').classList.remove('open')">No thanks, I'll find my own way back</button>
+  </div>
+</div>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('s',window.scrollY>60)},{passive:true});
+
+const ntBtn=document.getElementById('nt');
+ntBtn.addEventListener('click',()=>{
+  document.getElementById('nk').classList.toggle('open');
+  ntBtn.classList.toggle('open');
+});
+
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');ro.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+document.querySelectorAll('.hl-c').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',`${e.clientX-r.left}px`);
+    c.style.setProperty('--my',`${e.clientY-r.top}px`);
+  });
+});
+
+function submitSponsor(){
+  const n=document.getElementById('spo-name').value.trim();
+  const co=document.getElementById('spo-company').value.trim();
+  const em=document.getElementById('spo-email').value.trim();
+  const ph=document.getElementById('spo-phone').value.trim();
+  const msg=document.getElementById('spo-msg').value.trim();
+  if(!n||!co||!em){alert('Please fill out your name, company, and email.');return;}
+  const subject=encodeURIComponent('WCS 2026 Sponsor Inquiry — '+co);
+  const body=encodeURIComponent(
+    'Name: '+n+'\nCompany: '+co+'\nEmail: '+em+(ph?'\nPhone: '+ph:'')+'\n\n'+msg
+  );
+  window.location.href='mailto:Hello@LustraHouse.com?subject='+subject+'&body='+body;
+  document.getElementById('spoModal').classList.remove('open');
+}
+
+function submitSpeaker(){
+  const n=document.getElementById('spk-name').value.trim();
+  const em=document.getElementById('spk-email').value.trim();
+  const co=document.getElementById('spk-company').value.trim();
+  const exp=document.getElementById('spk-exp').value.trim();
+  const topic=document.getElementById('spk-topic').value.trim();
+  const social=document.getElementById('spk-social').value.trim();
+  if(!n||!em||!exp||!topic){alert('Please fill out your name, email, experience, and topic.');return;}
+  const subject=encodeURIComponent('WCS 2026 Speaker Application — '+n);
+  const body=encodeURIComponent(
+    'Name: '+n+'\nEmail: '+em+(co?'\nCompany: '+co:'')+'\n\nColiving Experience:\n'+exp+'\n\nProposed Topic:\n'+topic+(social?'\n\nSocial/Website: '+social:'')
+  );
+  window.location.href='mailto:Hello@LustraHouse.com?subject='+subject+'&body='+body;
+  document.getElementById('spkModal').classList.remove('open');
+}
+
+// Footer email signup (mailto for now — swap with ConvertKit later)
+function footerSignup(){
+  const n=document.getElementById('fs-name').value.trim();
+  const em=document.getElementById('fs-email').value.trim();
+  if(!em){alert('Please enter your email address.');return;}
+  const subject=encodeURIComponent('WCS 2026 — New Email Signup');
+  const body=encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\nThis person signed up for WCS 2026 updates via the website footer.');
+  window.location.href='mailto:Hello@LustraHouse.com?subject='+subject+'&body='+body;
+  document.getElementById('fs-name').value='';
+  document.getElementById('fs-email').value='';
+}
+
+// Exit popup signup (mailto for now — swap with ConvertKit later)
+function exitSignup(){
+  const n=document.getElementById('ex-name').value.trim();
+  const em=document.getElementById('ex-email').value.trim();
+  if(!em){alert('Please enter your email address.');return;}
+  const subject=encodeURIComponent('WCS 2026 — New Email Signup (Exit Intent)');
+  const body=encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\nThis person signed up for WCS 2026 updates via the exit-intent popup.');
+  window.location.href='mailto:Hello@LustraHouse.com?subject='+subject+'&body='+body;
+  document.getElementById('exitPopup').classList.remove('open');
+}
+
+// Exit-intent detection — fires once when mouse leaves viewport toward top
+let exitShown=false;
+document.addEventListener('mouseout',function(e){
+  if(exitShown)return;
+  if(e.clientY<5 && !e.relatedTarget && !e.toElement){
+    exitShown=true;
+    document.getElementById('exitPopup').classList.add('open');
+  }
+});
+</script>
+</body>
+</html>

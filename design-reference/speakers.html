@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speakers | Women's Coliving Summit 2026</title>
+<meta name="description" content="Meet the women leading WCS 2026 — operators, investors, and industry leaders sharing real strategies for building wealth through coliving.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --wine: #58303d;
+  --gold: #C69B3C;
+  --gold-light: #DCBE7B;
+  --gold-dark: #9E7A2A;
+  --gold-pale: #EDE0C3;
+  --ivory: #F4EADE;
+  --cream: #FAF7F2;
+  --white: #FFFFFF;
+  --blush: #F0E3DC;
+  --text: #3D2B30;
+  --text-mid: #7A6269;
+  --text-light: #A8949A;
+  --border: rgba(196,149,90,0.2);
+  --border-wine: rgba(88,48,61,0.08);
+  --font-h: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);font-weight:300;font-size:15px;line-height:1.8;color:var(--text-mid);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+h1,h2,h3{font-family:var(--font-h);font-weight:400;line-height:1.06;letter-spacing:-0.025em;color:var(--wine)}
+h1{font-size:clamp(44px,5.8vw,72px)}
+h2{font-size:clamp(34px,4.2vw,56px)}
+h3{font-size:clamp(20px,2vw,26px)}
+h1 em,h2 em,h3 em{font-style:italic;font-weight:300;color:var(--gold)}
+
+.ey{font-family:var(--font-b);font-size:10px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.ey::before{content:'';width:20px;height:1px;background:var(--gold)}
+.ey-c{justify-content:center}.ey-c::before{display:none}
+.ey-l{color:var(--gold-light)}.ey-l::before{background:var(--gold-light)}
+
+.btn{display:inline-block;font-family:var(--font-b);font-size:11px;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;padding:16px 38px;border:none;cursor:pointer;text-decoration:none;transition:all 0.4s cubic-bezier(.16,1,.3,1)}
+.btn-g{background:var(--gold);color:#fff}.btn-g:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(198,155,60,0.25)}
+.btn-w{background:var(--wine);color:var(--ivory)}.btn-w:hover{background:#3d2029;transform:translateY(-2px)}
+.btn-o{background:transparent;border:1px solid var(--gold);color:var(--gold-dark)}.btn-o:hover{background:var(--gold);color:#fff;transform:translateY(-2px)}
+.btn-ol{background:transparent;border:1px solid rgba(255,255,255,0.3);color:var(--ivory)}.btn-ol:hover{background:rgba(255,255,255,0.08)}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.9);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);transition:all 0.4s cubic-bezier(.16,1,.3,1)}
+nav.s{background:rgba(255,255,255,0.96);box-shadow:0 1px 0 var(--border-wine)}
+.ni{max-width:1200px;margin:0 auto;padding:0 60px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.nl{font-family:var(--font-h);font-size:19px;font-weight:500;color:var(--wine);text-decoration:none}
+.nl em{font-style:italic;color:var(--gold);font-weight:400}
+.nk{display:flex;align-items:center;gap:36px;list-style:none}
+.nk a:not(.btn){font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--wine);text-decoration:none;transition:color 0.3s}
+.nk a:not(.btn):hover{color:var(--gold)}
+.nt{display:none;width:24px;height:20px;position:relative;background:none;border:none;cursor:pointer;z-index:101}
+.nt span{position:absolute;left:0;width:24px;height:1.5px;background:var(--wine);transition:all 0.35s cubic-bezier(.16,1,.3,1)}
+.nt span:nth-child(1){top:0}.nt span:nth-child(2){top:9px}.nt span:nth-child(3){top:18px}
+.nt.open span:nth-child(1){top:9px;transform:rotate(45deg)}.nt.open span:nth-child(2){opacity:0}.nt.open span:nth-child(3){top:9px;transform:rotate(-45deg)}
+
+.rv{opacity:0;transform:translateY(40px);transition:opacity 0.85s cubic-bezier(.16,1,.3,1),transform 0.85s cubic-bezier(.16,1,.3,1)}
+.rv.v{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+@keyframes hr{to{opacity:1;transform:translateY(0)}}
+
+section{padding:100px 60px}
+.si{max-width:1100px;margin:0 auto}
+
+/* PAGE HERO */
+.page-hero{padding:160px 60px 80px;background:var(--white);text-align:center}
+.page-hero h1{margin-bottom:20px;opacity:0;transform:translateY(30px);animation:hr 1s cubic-bezier(.16,1,.3,1) 0.2s forwards}
+.page-hero .hero-sub{font-size:17px;line-height:1.85;color:var(--text-mid);max-width:580px;margin:0 auto;opacity:0;animation:hr 0.85s cubic-bezier(.16,1,.3,1) 0.5s forwards}
+
+/* SPEAKER GRID */
+.spk-section{background:var(--cream)}
+.spk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px}
+.spk-card{text-align:center}
+.spk-photo{width:100%;aspect-ratio:1;background:var(--ivory);border:0.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;font-family:var(--font-h);font-size:14px;font-style:italic;color:var(--text-light);margin-bottom:16px;transition:all 0.5s cubic-bezier(.16,1,.3,1);overflow:hidden}
+.spk-photo span{font-family:var(--font-b);font-size:9px;font-style:normal;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold)}
+.spk-card:hover .spk-photo{border-color:var(--gold);box-shadow:0 12px 32px rgba(198,155,60,0.1);transform:translateY(-4px)}
+.spk-card h3{font-size:18px;margin-bottom:4px}
+.spk-card p{font-size:12px;color:var(--text-light)}
+
+/* WHAT SPEAKERS BRING */
+.spk-value{background:var(--wine)}
+.spk-value h2{color:var(--ivory)}.spk-value h2 em{color:var(--gold-light)}
+.spk-value p{font-size:16px;font-weight:300;line-height:1.9;color:rgba(244,234,222,0.55);max-width:560px}
+.val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(198,155,60,0.12);margin-top:48px}
+.val-card{background:var(--wine);padding:2rem}
+.val-card h3{font-size:15px;font-weight:500;font-family:var(--font-b);color:var(--ivory);letter-spacing:0;margin-bottom:8px;line-height:1.4}
+.val-card p{font-size:13px;font-weight:300;line-height:1.75;color:rgba(244,234,222,0.48)}
+
+/* APPLY CTA */
+.apply{background:var(--cream);text-align:center}
+.apply p{font-size:16px;color:var(--text-mid);max-width:520px;margin:0 auto 28px;line-height:1.85}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(61,32,41,0.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s cubic-bezier(.16,1,.3,1);padding:40px 24px;overflow-y:auto}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{background:var(--white);max-width:520px;width:100%;padding:3rem;position:relative;transform:translateY(20px);transition:transform 0.4s cubic-bezier(.16,1,.3,1);margin:auto;flex-shrink:0}
+.modal-overlay.open .modal{transform:translateY(0)}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;font-size:20px;color:var(--text-light);transition:color 0.3s;width:32px;height:32px;display:flex;align-items:center;justify-content:center}
+.modal-close:hover{color:var(--wine)}
+.modal .ey{margin-bottom:12px}
+.modal h3{font-size:28px;margin-bottom:8px}
+.modal .modal-sub{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:28px}
+.modal label{display:block;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-mid);margin-bottom:6px}
+.modal input,.modal textarea{width:100%;font-family:var(--font-b);font-size:14px;font-weight:300;padding:12px 16px;border:0.5px solid var(--border);background:var(--cream);color:var(--text);outline:none;transition:border-color 0.3s;margin-bottom:16px}
+.modal input:focus,.modal textarea:focus{border-color:var(--gold)}
+.modal textarea{height:80px;resize:vertical}
+.modal .btn{width:100%;text-align:center;margin-top:4px}
+
+/* CTA BAND */
+.cta-band{background:var(--wine);text-align:center;padding:100px 60px}
+.cta-band h2{color:var(--ivory);margin-bottom:16px}.cta-band h2 em{color:var(--gold-light)}
+.cta-band p{font-size:16px;color:rgba(244,234,222,0.45);max-width:480px;margin:0 auto 32px;line-height:1.85}
+.cta-band .cg{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:#3d2029;padding:64px 60px 40px;color:rgba(244,234,222,0.4)}
+.fi{max-width:1100px;margin:0 auto}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.fb-logo{font-family:var(--font-h);font-size:18px;font-weight:500;color:var(--ivory);margin-bottom:10px}
+.fb-logo em{font-style:italic;color:var(--gold)}
+.fb-p{font-size:14px;font-weight:300;line-height:1.7;max-width:250px}
+.fc h4{font-size:10px;font-weight:500;font-family:var(--font-b);letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.fc ul{list-style:none}
+.fc a{display:block;font-size:14px;font-weight:300;color:rgba(244,234,222,0.4);text-decoration:none;margin-bottom:10px;transition:color 0.3s}
+.fc a:hover{color:var(--ivory)}
+.footer-signup{border-top:0.5px solid rgba(198,155,60,0.1);padding:32px 0;margin-bottom:32px}
+.footer-signup h4{font-size:10px;font-weight:500;font-family:var(--font-b);letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.footer-signup p{font-size:14px;font-weight:300;color:rgba(244,234,222,0.4);margin-bottom:16px;max-width:400px}
+.signup-form{display:flex;gap:8px;max-width:500px;flex-wrap:wrap}
+.signup-form input{flex:1;min-width:160px;font-family:var(--font-b);font-size:13px;font-weight:300;padding:12px 16px;border:0.5px solid rgba(198,155,60,0.25);background:rgba(255,255,255,0.06);color:var(--ivory);outline:none;transition:border-color 0.3s}
+.signup-form input::placeholder{color:rgba(244,234,222,0.3)}
+.signup-form input:focus{border-color:var(--gold)}
+.signup-form button{font-family:var(--font-b);font-size:11px;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;padding:12px 24px;background:var(--gold);color:#fff;border:none;cursor:pointer;transition:all 0.3s}
+.signup-form button:hover{background:var(--gold-dark)}
+.fbot{border-top:0.5px solid rgba(198,155,60,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.fbot a{color:rgba(244,234,222,0.4);text-decoration:none;transition:color 0.3s}
+.fbot a:hover{color:var(--gold)}
+
+@media(max-width:1024px){
+  .nk{display:none;position:fixed;inset:0;z-index:99;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;gap:28px}
+  .nk.open{display:flex}.nk.open a:not(.btn){font-size:14px;letter-spacing:0.18em;color:var(--wine)}
+  .nt{display:block}
+  section{padding:80px 32px}.ni{padding:0 32px}
+  .page-hero{padding:140px 32px 64px}
+  .spk-grid{grid-template-columns:repeat(2,1fr)}
+  .val-grid{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .page-hero{padding:120px 24px 56px}
+  section{padding:64px 24px}
+  .cta-band{padding:64px 24px}
+  .spk-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .ft{grid-template-columns:1fr;gap:32px}
+  .fbot{flex-direction:column;gap:12px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="ni">
+    <a href="index.html" class="nl">Women's Coliving <em>Summit</em></a>
+    <button class="nt" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nk" id="nk">
+      <li><a href="about.html">About</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="speakers.html">Speakers</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="wcs-2025.html">WCS 2025</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="https://www.eventbrite.com" target="_blank" class="btn btn-g" style="padding:12px 28px">Get My Ticket</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="ey ey-c" style="opacity:0;animation:hr .8s cubic-bezier(.16,1,.3,1) .05s forwards">WCS 2026 Speakers</div>
+  <h1>Women who've <em>built it.</em></h1>
+  <p class="hero-sub">Every speaker at WCS is a woman with real coliving experience — sharing real strategies, real numbers, and the real lessons that don't make it to social media.</p>
+</section>
+
+<!-- 2026 SPEAKER GRID -->
+<section class="spk-section">
+  <div class="si">
+    <div class="rv">
+      <div class="ey">2026 Lineup</div>
+      <h2>Speakers announced <em>this summer.</em></h2>
+      <p style="font-size:16px;line-height:1.85;color:var(--text-mid);max-width:560px;margin-bottom:8px">We're finalizing an incredible lineup of operators, investors, and industry leaders. Follow us on social media or sign up for updates to be the first to know.</p>
+    </div>
+    <div class="spk-grid">
+      <div class="spk-card rv d1"><div class="spk-photo"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+      <div class="spk-card rv d2"><div class="spk-photo"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+      <div class="spk-card rv d3"><div class="spk-photo"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+      <div class="spk-card rv d4"><div class="spk-photo"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+      <div class="spk-card rv d1"><div class="spk-photo"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+      <div class="spk-card rv d2"><div class="spk-photo"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+      <div class="spk-card rv d3"><div class="spk-photo"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+      <div class="spk-card rv d4"><div class="spk-photo"><span>Headshot</span>Speaker TBA</div><h3>Coming Soon</h3><p>Announced Summer 2026</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT OUR SPEAKERS BRING -->
+<section class="spk-value">
+  <div class="si">
+    <div class="rv">
+      <div class="ey ey-l">What Our Speakers Bring</div>
+      <h2>No theory. No fluff. <em>Just truth.</em></h2>
+      <p>Every woman on our stage has been in the trenches — building portfolios, managing residents, navigating financing, and scaling operations. Here's what you'll hear from them.</p>
+    </div>
+    <div class="val-grid">
+      <div class="val-card rv d1">
+        <h3>Real Numbers</h3>
+        <p>Actual deal breakdowns, revenue figures, and the financial realities of coliving — not hypothetical projections.</p>
+      </div>
+      <div class="val-card rv d2">
+        <h3>Hard-Won Lessons</h3>
+        <p>The mistakes they made, the problems they solved, and the decisions that changed the trajectory of their business.</p>
+      </div>
+      <div class="val-card rv d3">
+        <h3>Actionable Frameworks</h3>
+        <p>Systems, processes, and strategies you can take home and implement in your own portfolio this month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY TO SPEAK -->
+<section class="apply">
+  <div class="si rv">
+    <div class="ey ey-c">Apply to Speak</div>
+    <h2>Have something worth <em>sharing?</em></h2>
+    <p>We're looking for women with real coliving experience — operators, investors, and industry leaders who can teach, inspire, and equip our attendees. If that sounds like you, we'd love to hear from you.</p>
+    <button class="btn btn-w" onclick="document.getElementById('spkModal').classList.add('open')">Apply to Speak</button>
+  </div>
+</section>
+
+<!-- SPEAKER MODAL -->
+<div class="modal-overlay" id="spkModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('spkModal').classList.remove('open')">&times;</button>
+    <div class="ey">Apply to Speak</div>
+    <h3>Share your <em>story.</em></h3>
+    <p class="modal-sub">Tell us about yourself and what you'd bring to the WCS 2026 stage.</p>
+    <label>Your Name</label>
+    <input type="text" id="spk-name" placeholder="First and last name">
+    <label>Email</label>
+    <input type="email" id="spk-email" placeholder="you@email.com">
+    <label>Company / Brand (if applicable)</label>
+    <input type="text" id="spk-company" placeholder="Your company or brand name">
+    <label>Your Coliving Experience</label>
+    <textarea id="spk-exp" placeholder="How are you involved in coliving? (operator, investor, service provider, etc.)"></textarea>
+    <label>What would you speak about?</label>
+    <textarea id="spk-topic" placeholder="What topic, framework, or story would you share with our attendees?"></textarea>
+    <label>Social / Website (optional)</label>
+    <input type="text" id="spk-social" placeholder="Instagram, LinkedIn, or website URL">
+    <button class="btn btn-g" onclick="submitSpeaker()">Submit Application</button>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="si rv">
+    <div class="ey ey-l ey-c">October 16 – 17, 2026</div>
+    <h2>Build the room.<br><em>Own the future.</em></h2>
+    <p>Secure your seat and be in the room when these women take the stage.</p>
+    <div class="cg">
+      <a href="https://www.eventbrite.com" target="_blank" class="btn btn-g">Get My Ticket</a>
+      <a href="agenda.html" class="btn btn-ol">View the Agenda</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div>
+        <div class="fb-logo">Women's Coliving <em>Summit</em></div>
+        <p class="fb-p">Women building wealth — one room at a time.</p>
+      </div>
+      <div class="fc"><h4>Navigate</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="wcs-2025.html">WCS 2025</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul></div>
+      <div class="fc"><h4>Connect</h4><ul>
+        <li><a href="https://instagram.com/colivingcait" target="_blank">Instagram</a></li>
+        <li><a href="#" target="_blank">Facebook</a></li>
+        <li><a href="https://linkedin.com/in/coliving-cait" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:Hello@LustraHouse.com">Email</a></li>
+      </ul></div>
+      <div class="fc"><h4>Get Involved</h4><ul>
+        <li><a href="https://www.eventbrite.com" target="_blank">Buy Tickets</a></li>
+        <li><a href="#">Sponsor WCS</a></li>
+        <li><a href="#" onclick="event.preventDefault();document.getElementById('spkModal').classList.add('open')">Apply to Speak</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-signup">
+      <h4>Stay in the Loop</h4>
+      <p>Be the first to know when speakers are announced.</p>
+      <div class="signup-form">
+        <input type="text" id="fs-name" placeholder="First name">
+        <input type="email" id="fs-email" placeholder="Email address">
+        <button onclick="footerSignup()">Count Me In</button>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Women's Coliving Summit. All rights reserved.</span>
+      <a href="mailto:Hello@LustraHouse.com">Hello@LustraHouse.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('s',window.scrollY>60)},{passive:true});
+const ntBtn=document.getElementById('nt');
+ntBtn.addEventListener('click',()=>{document.getElementById('nk').classList.toggle('open');ntBtn.classList.toggle('open')});
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');ro.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+function submitSpeaker(){
+  const n=document.getElementById('spk-name').value.trim();
+  const em=document.getElementById('spk-email').value.trim();
+  const co=document.getElementById('spk-company').value.trim();
+  const exp=document.getElementById('spk-exp').value.trim();
+  const topic=document.getElementById('spk-topic').value.trim();
+  const social=document.getElementById('spk-social').value.trim();
+  if(!n||!em||!exp||!topic){alert('Please fill out your name, email, experience, and topic.');return}
+  const subject=encodeURIComponent('WCS 2026 Speaker Application — '+n);
+  const body=encodeURIComponent('Name: '+n+'\nEmail: '+em+(co?'\nCompany: '+co:'')+'\n\nColiving Experience:\n'+exp+'\n\nProposed Topic:\n'+topic+(social?'\n\nSocial/Website: '+social:''));
+  window.location.href='mailto:Hello@LustraHouse.com?subject='+subject+'&body='+body;
+  document.getElementById('spkModal').classList.remove('open');
+}
+
+function footerSignup(){
+  const n=document.getElementById('fs-name').value.trim();
+  const em=document.getElementById('fs-email').value.trim();
+  if(!em){alert('Please enter your email address.');return}
+  const subject=encodeURIComponent('WCS 2026 — New Email Signup');
+  const body=encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\nSigned up via the Speakers page footer.');
+  window.location.href='mailto:Hello@LustraHouse.com?subject='+subject+'&body='+body;
+  document.getElementById('fs-name').value='';document.getElementById('fs-email').value='';
+}
+</script>
+</body>
+</html>
