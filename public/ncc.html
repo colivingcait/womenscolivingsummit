@@ -108,9 +108,7 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 .fm-fl::after{right:0;background:linear-gradient(to left,transparent,var(--g))}
 .fm-fl i{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-style:normal;font-size:10px;color:var(--g)}
 .sc3.on .fm-h{animation:bam .85s cubic-bezier(.16,1.4,.3,1) .15s forwards}
-.sc3.on .fm-tag{animation:fi .8s ease 1s forwards}
-.sc3.on .fm-fl{animation:fi .5s ease 1.3s forwards}
-.sc3.on .fm-dt{animation:fi .7s ease 1.5s forwards}
+.sc3.on .fm-fl{animation:fi .6s ease 1.1s forwards}
 
 /* ═══ SCREEN 4 — STATS + "Saved a seat" ═══ */
 .sc-stat{background:var(--cream)}
@@ -414,9 +412,7 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 <div class="spkf" id="s3spk"></div>
 <div style="position:relative;z-index:2">
 <div class="fm-h-wrap"><div class="fm-h-glow"></div><h1 class="fm-h">The Women's<br>Coliving <em>Summit</em></h1></div>
-<p class="fm-tag">Women building wealth — one room at a time.</p>
 <div class="fm-fl"><i>✦</i></div>
-<p class="fm-dt">Friday &amp; Saturday · October 16–17, 2026<br>Atlanta, Georgia</p>
 </div></div>
 
 <!-- S4 STATS + SAVED-A-SEAT -->
@@ -766,7 +762,7 @@ const SCREENS=[1,2,3,4,5,6,7,8,9,10,11];
 const PAUSE=[11];          // Accept screen waits for user
 const DARK=[11];           // Dark dots on the accept screen
 // Times in ms — countdown is 3.5s to allow several visible ticks
-const TIME={2:4000,3:4500,4:6500,5:3500,6:8000,7:6500,8:3500,9:7500,10:7000};
+const TIME={2:4000,3:3500,4:6500,5:3500,6:8000,7:6500,8:3500,9:7500,10:7000};
 let ci=0,tmr=null;
 
 const dotsEl=document.getElementById('dots');
