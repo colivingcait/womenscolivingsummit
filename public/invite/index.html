@@ -286,14 +286,17 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 
 /* MULTI-STEP CELEBRATION */
 .cstep{display:none;width:100%}
-.cstep.show{display:block;animation:fi .6s ease forwards}
-.cel-msg{font-family:var(--fb);font-size:clamp(14px,3.6vw,16px);color:rgba(244,234,222,.72);line-height:1.65;margin:8px 0 28px;max-width:440px;margin-left:auto;margin-right:auto}
-.cel-msg strong{color:var(--iv);font-weight:600}
-.cel-msg em{color:var(--gl);font-style:italic;font-weight:400}
-.cel-link{display:inline-block;background:none;border:none;font-family:var(--fb);font-size:13px;color:rgba(244,234,222,.55);text-decoration:none;letter-spacing:.04em;cursor:pointer;padding:8px 12px;margin-top:6px;transition:color .3s}
+.cstep.show{display:block;animation:fi .8s ease forwards}
+.cel-orn{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:22px;opacity:0;animation:fi .9s ease .35s forwards}
+.cel-orn::before,.cel-orn::after{content:'';width:56px;height:.5px;background:linear-gradient(to right,transparent,var(--gl))}
+.cel-orn::after{background:linear-gradient(to left,transparent,var(--gl))}
+.cel-orn i{font-style:normal;font-size:18px;color:var(--gl);text-shadow:0 0 12px rgba(220,190,123,.5)}
+.cel-link{display:inline-block;background:none;border:none;font-family:var(--fb);font-size:12px;color:rgba(244,234,222,.5);text-decoration:none;letter-spacing:.04em;cursor:pointer;padding:10px 12px;margin-top:8px;transition:color .3s}
 .cel-link:hover{color:var(--gl)}
 
-/* Step 2 — Refer form */
+/* Step 1 — hero refer-a-friend block */
+.cel-refer-block{margin-top:34px;padding-top:32px;border-top:.5px solid rgba(220,190,123,.18);opacity:0;animation:fi .8s ease 1.4s forwards}
+.cel-refer-ey{font-family:var(--fh);font-size:13px;font-weight:400;font-style:italic;color:rgba(220,190,123,.65);letter-spacing:.06em;margin-bottom:18px}
 .cel-h2{font-family:var(--fh);font-size:clamp(34px,9vw,52px);font-weight:500;line-height:1.05;letter-spacing:-.02em;margin-bottom:12px}
 .cel-h2 em{font-style:italic;font-weight:500}
 .cel-sub{font-family:var(--fh);font-size:clamp(15px,3.8vw,18px);font-weight:300;font-style:italic;color:rgba(244,234,222,.7);margin-bottom:24px;line-height:1.55;max-width:420px;margin-left:auto;margin-right:auto}
@@ -304,7 +307,7 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 .refer-btn{font-family:var(--fb);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:16px 20px;background:linear-gradient(105deg,#9c7530 0%,#d4aa4a 22%,#f0d48a 45%,#fff6d6 50%,#f0d48a 55%,#d4aa4a 78%,#9c7530 100%);background-size:300% 100%;background-position:50% center;color:var(--wd);border:none;border-radius:2px;cursor:pointer;box-shadow:0 6px 24px rgba(198,155,60,.4);transition:background-position .5s,transform .3s,box-shadow .3s;text-shadow:0 1px 0 rgba(255,255,255,.3);margin-top:4px}
 .refer-btn:hover{background-position:0% center;transform:translateY(-2px);box-shadow:0 12px 36px rgba(198,155,60,.55)}
 
-/* Step 3 — Success */
+/* Step 2 — success + secondary */
 .cel-h3{font-family:var(--fh);font-size:clamp(30px,8vw,46px);font-weight:500;line-height:1.06;letter-spacing:-.02em;margin-bottom:10px}
 .cel-h3 em{font-style:italic;font-weight:500}
 .cel-sub2{font-family:var(--fh);font-size:clamp(15px,3.6vw,18px);font-weight:300;font-style:italic;color:rgba(244,234,222,.7);margin-bottom:22px;line-height:1.55;max-width:420px;margin-left:auto;margin-right:auto}
@@ -313,9 +316,17 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 .refer-copy{font-family:var(--fb);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:12px 16px;background:var(--g);color:var(--wd);border:none;border-radius:2px;cursor:pointer;flex-shrink:0;transition:background .3s;text-shadow:0 1px 0 rgba(255,255,255,.2)}
 .refer-copy:hover{background:var(--gl)}
 .refer-copy.done{background:var(--gd);color:var(--iv);text-shadow:none}
-.refer-share{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.refer-share{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
 .refer-share-btn{font-family:var(--fb);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:11px 18px;background:rgba(244,234,222,.06);border:.5px solid rgba(220,190,123,.28);color:var(--gl);border-radius:2px;cursor:pointer;text-decoration:none;transition:background .3s,border-color .3s}
 .refer-share-btn:hover{background:rgba(220,190,123,.12);border-color:var(--gl)}
+.cel-next-block{margin-top:8px;padding:24px 0 8px;border-top:.5px solid rgba(220,190,123,.18);text-align:left}
+.cel-next-ey{font-family:var(--fb);font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--g);margin-bottom:16px;text-align:center}
+.cel-next-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.cel-next-list li{font-family:var(--fb);font-size:13px;font-weight:300;color:rgba(244,234,222,.6);line-height:1.55;padding-left:18px;position:relative}
+.cel-next-list li::before{content:'✦';position:absolute;left:0;top:0;color:var(--gl);font-size:11px;opacity:.7}
+.cel-li-t{color:var(--iv);font-weight:500}
+.cel-li-t a{color:var(--gl);text-decoration:none;border-bottom:.5px solid rgba(220,190,123,.4);transition:color .3s,border-color .3s}
+.cel-li-t a:hover{color:var(--iv);border-bottom-color:var(--iv)}
 .cel-fw i{position:absolute;border-radius:50%;animation:fwb .9s cubic-bezier(.16,1,.3,1) forwards}
 
 /* ═══ EMAIL CAPTURE OVERLAY ═══ */
@@ -573,37 +584,31 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 <div class="cel-p" id="celP"></div>
 <div class="cel-c">
 
-<!-- STEP 1: You're in! → Facebook -->
+<!-- STEP 1: You're in! → Refer a friend (hero action) -->
 <div class="cstep cstep-1 show" data-step="1">
-  <div class="cel-e">🎉</div>
-  <div class="cel-h gs">You're <em>in!</em></div>
+  <div class="cel-orn"><i>✦</i></div>
+  <div class="cel-h gs">You're <em>in.</em></div>
   <div class="cel-tag gs">Welcome to the room.</div>
   <div class="cel-dt">FRIDAY &amp; SATURDAY · OCTOBER 16–17, 2026 · ATLANTA</div>
-  <div class="cel-msg">Next stop: <strong>She Leads Coliving</strong> on Facebook — our private group of women operators and investors building shared housing together.</div>
-  <div class="cel-btns">
-    <a href="https://www.facebook.com/groups/1407759770477235/" target="_blank" rel="noopener" class="cel-fb" id="celFbBtn">Join She Leads Coliving on Facebook</a>
-    <button class="cel-link" id="celAlready" type="button">I'm already in the She Leads group →</button>
+  <div class="cel-refer-block">
+    <div class="cel-refer-ey">— now, one more thing —</div>
+    <div class="cel-h2"><span class="gs">Bring a friend,</span><br><em class="gs">save her $50.</em></div>
+    <div class="cel-sub">Share the summit with a friend — she gets $50 off and a personalized note from you.</div>
+    <form class="refer-form" id="referForm" novalidate>
+      <input class="refer-in" id="refFrom" type="text" name="referrer" placeholder="Your first name" autocomplete="given-name" required>
+      <input class="refer-in" id="refFor" type="text" name="friend_name" placeholder="Friend's first name" required>
+      <input class="refer-in" id="refEmail" type="email" name="friend_email" placeholder="Friend's email address" autocomplete="off" inputmode="email" required>
+      <button class="refer-btn" type="submit">Send Her the Invitation</button>
+    </form>
+    <button class="cel-link" id="celSkip" type="button">Maybe later →</button>
   </div>
 </div>
 
-<!-- STEP 2: Refer a friend -->
+<!-- STEP 2: Success + secondary "what's next" -->
 <div class="cstep cstep-2" data-step="2">
-  <div class="cel-h2"><span class="gs">Bring a friend,</span><br><em class="gs">save her $50.</em></div>
-  <div class="cel-sub">Share the summit with a friend — she gets $50 off, and a personalized note from you.</div>
-  <form class="refer-form" id="referForm" novalidate>
-    <input class="refer-in" id="refFrom" type="text" name="referrer" placeholder="Your first name" autocomplete="given-name" required>
-    <input class="refer-in" id="refFor" type="text" name="friend_name" placeholder="Friend's first name" required>
-    <input class="refer-in" id="refEmail" type="email" name="friend_email" placeholder="Friend's email address" autocomplete="off" inputmode="email" required>
-    <button class="refer-btn" type="submit">Send Her the Invitation</button>
-  </form>
-  <button class="cel-link" id="celSkip" type="button">Maybe later</button>
-</div>
-
-<!-- STEP 3: Success + share -->
-<div class="cstep cstep-3" data-step="3">
-  <div class="cel-e">✨</div>
+  <div class="cel-orn"><i>✦</i></div>
   <div class="cel-h3"><span id="refFriendNameOut" class="gs">Your friend</span> <em class="gs">is on her way.</em></div>
-  <div class="cel-sub2">We've sent her a personalized invitation with $50 off. Want to share it yourself, too?</div>
+  <div class="cel-sub2" id="refSubMsg">We've sent her a personalized invitation with $50 off. Want to share it yourself, too?</div>
   <div class="refer-link-wrap">
     <input type="text" class="refer-link" id="refLink" readonly>
     <button class="refer-copy" id="refCopy" type="button">Copy</button>
@@ -613,7 +618,15 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
     <a class="refer-share-btn" id="refEmailBtn" href="#">Email</a>
     <button class="refer-share-btn" id="refNative" type="button" hidden>Share</button>
   </div>
-  <a href="/" class="cel-s">Done — explore the full WCS site →</a>
+  <div class="cel-next-block">
+    <div class="cel-next-ey">While you're here</div>
+    <ul class="cel-next-list">
+      <li><span class="cel-li-t">Watch your inbox</span> — your confirmation &amp; receipt are on the way from Eventbrite.</li>
+      <li><span class="cel-li-t"><a href="https://www.facebook.com/groups/1407759770477235/" target="_blank" rel="noopener">Join She Leads Coliving on Facebook →</a></span> — our private group of women operators and investors.</li>
+      <li><span class="cel-li-t">Save the dates</span> — October 16–17, 2026 · Atlanta, Georgia.</li>
+    </ul>
+  </div>
+  <a href="/" class="cel-s">Explore the full WCS site →</a>
 </div>
 
 </div></div>
@@ -938,14 +951,7 @@ document.getElementById('ecForm').addEventListener('submit',function(e){
   location.href='/';
 });
 
-// ═══ POST-PURCHASE: Step 1 → Step 2 ═══
-document.getElementById('celFbBtn').addEventListener('click',()=>{
-  // Link opens FB in a new tab; we advance to the share step a beat later
-  setTimeout(()=>setCelStep(2),150);
-});
-document.getElementById('celAlready').addEventListener('click',()=>setCelStep(2));
-
-// ═══ POST-PURCHASE: Step 2 form → Step 3 ═══
+// ═══ POST-PURCHASE: Refer form (step 1) → Success + secondary info (step 2) ═══
 document.getElementById('referForm').addEventListener('submit',function(e){
   e.preventDefault();
   const from=document.getElementById('refFrom').value.trim();
@@ -959,11 +965,9 @@ document.getElementById('referForm').addEventListener('submit',function(e){
   //       Suggested fields: friend_name, friend_email, referrer_name.
   try{const r=JSON.parse(localStorage.getItem('wcs_referrals')||'[]');r.push({from,forName,email,ts:Date.now()});localStorage.setItem('wcs_referrals',JSON.stringify(r))}catch(_){}
   console.log('WCS referral captured (stub — wire Kit here):',{from,forName,email});
-  // Build personalized URL
   const url=`${location.origin}/invite?from=${encodeURIComponent(from)}&for=${encodeURIComponent(forName)}`;
   document.getElementById('refFriendNameOut').textContent=forName;
   document.getElementById('refLink').value=url;
-  // Wire share intents
   const subject=`A special invitation for ${forName} — from ${from}`;
   const body=`Hi ${forName} — I just got my ticket to the Women's Coliving Summit (Atlanta · Oct 16–17, 2026) and saved you a seat at $50 off. Here's your invitation: ${url}`;
   document.getElementById('refText').href=`sms:?&body=${encodeURIComponent(body)}`;
@@ -973,17 +977,17 @@ document.getElementById('referForm').addEventListener('submit',function(e){
     nativeBtn.hidden=false;
     nativeBtn.onclick=()=>navigator.share({title:subject,text:body,url}).catch(()=>{});
   }
-  setCelStep(3);
+  setCelStep(2);
   for(let w=0;w<3;w++)setTimeout(()=>firework(true),w*350);
 });
 document.getElementById('celSkip').addEventListener('click',()=>{
   document.getElementById('refFriendNameOut').textContent='A friend';
   document.getElementById('refLink').value=`${location.origin}/invite`;
-  document.querySelector('.cstep-3 .cel-sub2').textContent="No worries — share the invite anytime.";
-  setCelStep(3);
+  document.getElementById('refSubMsg').textContent="No worries — you can share the invite anytime.";
+  setCelStep(2);
 });
 
-// ═══ POST-PURCHASE: Step 3 copy button ═══
+// ═══ POST-PURCHASE: Copy personalized link ═══
 document.getElementById('refCopy').addEventListener('click',function(){
   const link=document.getElementById('refLink');
   link.select();link.setSelectionRange(0,99999);
