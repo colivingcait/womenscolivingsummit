@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -53,6 +54,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <div className="comm-photo">
+        <div className="comm-photo-inner" style={{ padding: 0, overflow: 'hidden' }}>
+          <img
+            src="/wide-group2.png"
+            alt="Women gathered at the Women's Coliving Summit"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }}
+          />
+        </div>
+        <div className="comm-photo-overlay" />
+      </div>
+
       <section className="founders">
         <div className="si">
           <div className="rv" style={{ textAlign: 'center' }}>
@@ -61,7 +73,13 @@ export default function AboutPage() {
           </div>
           <div className="founders-grid">
             <div className="founder-card rv d1">
-              <div className="founder-photo"><span>Headshot</span>Caitlyn Verdugo</div>
+              <div className="founder-photo" style={{ padding: 0, overflow: 'hidden' }}>
+                <img
+                  src="/caitlyn-headshot.png"
+                  alt="Caitlyn Verdugo, co-founder of the Women's Coliving Summit"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
               <h3>Caitlyn Verdugo <em>| Coliving Cait</em></h3>
               <div className="founder-title">Co-Founder, Women&apos;s Coliving Summit</div>
               <div className="founder-bio">
@@ -135,6 +153,12 @@ export default function AboutPage() {
               Coliving is one of the most powerful tools we have right now — working to solve the
               affordable housing crisis and helping everyday women build real wealth through real
               estate.
+            </div>
+            <div className="mission-photo">
+              <img
+                src="/wide-group1.png"
+                alt="Women building together at WCS 2025"
+              />
             </div>
             <p>
               Rather than just saying &ldquo;we need to build more,&rdquo; which takes decades, coliving

@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { useModals } from '@/components/ModalProvider';
 
@@ -38,6 +39,17 @@ export default function SponsorsPage() {
           </div>
         </div>
       </section>
+
+      <div className="comm-photo">
+        <div className="comm-photo-inner" style={{ padding: 0, overflow: 'hidden' }}>
+          <img
+            src="/wide-group2.png"
+            alt="WCS attendees connecting"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }}
+          />
+        </div>
+        <div className="comm-photo-overlay" />
+      </div>
 
       <section className="why-sponsor">
         <div className="si">

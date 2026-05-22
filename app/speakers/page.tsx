@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { useModals } from '@/components/ModalProvider';
 
@@ -43,6 +44,17 @@ export default function SpeakersPage() {
           </div>
         </div>
       </section>
+
+      <div className="comm-photo">
+        <div className="comm-photo-inner" style={{ padding: 0, overflow: 'hidden' }}>
+          <img
+            src="/wide-group1.png"
+            alt="WCS 2025 attendees"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }}
+          />
+        </div>
+        <div className="comm-photo-overlay" />
+      </div>
 
       <section className="spk-value">
         <div className="si">

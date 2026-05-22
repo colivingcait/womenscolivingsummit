@@ -40,16 +40,15 @@ export default function WCS2025Page() {
             <div className="ey">The Experience</div>
             <h2>What the room <em>looked like.</em></h2>
           </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <div className="gallery-grid rv d1">
-            <div className="gallery-item tall">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item tall">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
-            <div className="gallery-item">Photo Placeholder</div>
+            <div className="gallery-item tall"><img src="/wcs2025/wcs1.png" alt="WCS 2025 moment" /></div>
+            <div className="gallery-item"><img src="/wcs2025/wcs2.png" alt="WCS 2025 moment" /></div>
+            <div className="gallery-item"><img src="/wcs2025/wcs3.png" alt="WCS 2025 moment" /></div>
+            <div className="gallery-item"><img src="/wcs2025/wcs4.png" alt="WCS 2025 moment" /></div>
+            <div className="gallery-item tall"><img src="/wcs2025/wcs5.png" alt="WCS 2025 moment" /></div>
+            <div className="gallery-item"><img src="/wcs2025/wcs6.png" alt="WCS 2025 moment" /></div>
+            <div className="gallery-item"><img src="/wcs2025/wcs7.png" alt="WCS 2025 moment" /></div>
           </div>
         </div>
       </section>
@@ -83,11 +82,22 @@ export default function WCS2025Page() {
         </div>
       </section>
 
-      <div className="photo-strip">
-        <div className="photo-strip-item">Photo</div>
-        <div className="photo-strip-item">Photo</div>
-        <div className="photo-strip-item">Photo</div>
-        <div className="photo-strip-item">Photo</div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <div className="photo-strip inv">
+        <div className="photo-track">
+          <div className="photo-strip-item"><img src="/wcs2025/wcs2.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs4.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs6.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs3.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs7.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs1.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs2.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs4.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs6.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs3.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs7.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/wcs2025/wcs1.png" alt="" /></div>
+        </div>
       </div>
 
       <section className="tst">

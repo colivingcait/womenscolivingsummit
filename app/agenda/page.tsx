@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -49,6 +50,17 @@ export default function AgendaPage() {
           </div>
         </div>
       </section>
+
+      <div className="comm-photo">
+        <div className="comm-photo-inner" style={{ padding: 0, overflow: 'hidden' }}>
+          <img
+            src="/wide-group2.png"
+            alt="WCS 2025 attendees"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }}
+          />
+        </div>
+        <div className="comm-photo-overlay" />
+      </div>
 
       <section className="philosophy">
         <div className="si">
