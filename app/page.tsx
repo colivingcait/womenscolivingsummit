@@ -142,6 +142,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PHOTO STRIP — scrolling marquee between about and highlights */}
+      <div className="photo-strip">
+        <div className="photo-track">
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage1.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage2.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage3.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage4.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage1.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage2.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage3.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage4.png" alt="" /></div>
+        </div>
+      </div>
+
       {/* HIGHLIGHTS */}
       <section className="hl" id="highlights">
         <div className="sect-spk" />
