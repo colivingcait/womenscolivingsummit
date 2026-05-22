@@ -111,14 +111,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PHOTO STRIP */}
-      <div className="photo-strip">
-        <div className="photo-strip-item"><img src="/homepagestrip/homepage1.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0}} /></div>
-        <div className="photo-strip-item"><img src="/homepagestrip/homepage2.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0}} /></div>
-        <div className="photo-strip-item"><img src="/homepagestrip/homepage3.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0}} /></div>
-        <div className="photo-strip-item"><img src="/homepagestrip/homepage4.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0}} /></div>
-      </div>
-
       {/* ABOUT */}
       <section className="about" id="about">
         <div className="si">
