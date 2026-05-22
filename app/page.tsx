@@ -114,8 +114,8 @@ export default function Home() {
         <div className="si">
           <div className="rv">
             <div className="ey">Who It&apos;s For</div>
-            <h2>Is this <em className="gs">your room?</em></h2>
-            <p className="sb">WCS welcomes women at every stage of their coliving journey.</p>
+            <h2>Wherever you are —<br />this is <em className="gs">your room.</em></h2>
+            <p className="sb">WCS was built for women at every stage of their coliving journey. No matter where you&apos;re starting, you belong here.</p>
           </div>
           <div className="aud-g">
             <div className="aud-c rv d1">
