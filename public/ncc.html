@@ -120,11 +120,12 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 
 /* ═══ SCREEN 5 — BUILT BY WOMEN ═══ */
 .sc5{background:var(--cream)}
-.bw{font-family:var(--fh);font-size:clamp(30px,8.5vw,50px);font-weight:400;color:var(--w);line-height:1.06;letter-spacing:-.02em;opacity:0;transform:translateY(16px)}
-.bw em{color:var(--g);font-style:italic;font-weight:300}
-.sc5.on .bw{animation:fi 1s ease .1s forwards}
-.bw2{font-family:var(--fb);font-size:13px;color:#A8949A;margin-top:16px;opacity:0;transform:translateY(10px)}
-.sc5.on .bw2{animation:fi .6s ease .6s forwards}
+.bw-1{font-family:var(--fh);font-size:clamp(30px,8vw,52px);font-weight:400;color:var(--w);line-height:1.05;letter-spacing:-.02em;opacity:0;transform:translateY(18px)}
+.bw-2{font-family:var(--fh);font-size:clamp(38px,10.5vw,72px);font-weight:500;font-style:italic;line-height:1;letter-spacing:-.03em;margin-top:14px;background:linear-gradient(105deg,#5e3c10 0%,#8b6535 12%,var(--g) 26%,#d4aa4a 40%,var(--gl) 48%,#fff6d6 52%,var(--gl) 56%,#d4aa4a 64%,var(--g) 78%,#8b6535 90%,#5e3c10 100%);background-size:200% 100%;background-position:50% center;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 22px rgba(198,155,60,.45));opacity:0;transform:scale(.7)}
+.sc5.on .bw-1{animation:fi .9s cubic-bezier(.16,1,.3,1) .15s forwards}
+.sc5.on .bw-2{animation:bam .9s cubic-bezier(.16,1.4,.3,1) 1.1s forwards,summitShine 5s ease-in-out 2s infinite alternate}
+.bw2{font-family:var(--fb);font-size:13px;color:#A8949A;margin-top:18px;letter-spacing:.04em;opacity:0;transform:translateY(10px)}
+.sc5.on .bw2{animation:fi .6s ease 2.4s forwards}
 
 /* ═══ SCREEN 6 — TAILORED TO YOU ═══ */
 .sc6{background:var(--cream)}
@@ -142,19 +143,20 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 .sc6-ww-h{font-family:var(--fh);font-size:clamp(28px,7.6vw,42px);font-weight:400;font-style:italic;color:var(--w);line-height:1.05;letter-spacing:-.01em}
 .sc6-ww-sub{font-family:var(--fb);font-size:clamp(11px,2.8vw,14px);font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gd);margin-top:8px}
 .sc6.on .sc6-h{animation:fi .8s ease .1s forwards}
-.sc6.on .sc6-item:nth-child(1){animation:fi .7s ease .4s forwards}
-.sc6.on .sc6-item:nth-child(2){animation:fi .7s ease 1.1s forwards}
-.sc6.on .sc6-item:nth-child(3){animation:fi .7s ease 1.8s forwards}
-.sc6.on .sc6-item:nth-child(4){animation:fi .7s ease 2.5s forwards}
-.sc6.on .sc6-ww-div{animation:fi .6s ease 3.3s forwards}
-.sc6.on .sc6-ww{animation:fi .9s ease 3.7s forwards}
+.sc6.on .sc6-item:nth-child(1){animation:fi .7s ease 1.2s forwards}
+.sc6.on .sc6-item:nth-child(2){animation:fi .7s ease 1.9s forwards}
+.sc6.on .sc6-item:nth-child(3){animation:fi .7s ease 2.6s forwards}
+.sc6.on .sc6-item:nth-child(4){animation:fi .7s ease 3.3s forwards}
+.sc6.on .sc6-ww-div{animation:fi .6s ease 4.1s forwards}
+.sc6.on .sc6-ww{animation:fi .9s ease 4.5s forwards}
 
 /* ═══ SCREEN 7 — TESTIMONIAL (typewriter) ═══ */
 .sc7{background:var(--cream)}
 .tt-wrap{max-width:600px;width:100%;position:relative;z-index:2}
 .tt-mark{font-family:var(--fh);font-size:clamp(70px,18vw,130px);line-height:.6;font-weight:500;display:block;opacity:0}
 .tt-mark.bottom{transform:rotate(180deg);margin-top:-6px}
-.tt-q{font-family:var(--fh);font-size:clamp(22px,5.2vw,32px);font-weight:400;font-style:italic;color:var(--w);line-height:1.45;margin:14px 0 22px;min-height:3em}
+.tt-q{font-family:var(--fh);font-size:clamp(22px,5.2vw,32px);font-weight:400;font-style:italic;color:var(--w);line-height:1.45;margin:14px 0 22px;min-height:3em;opacity:0;transition:opacity .3s ease}
+.tt-q.go{opacity:1}
 .tt-q .caret{display:inline-block;width:2px;background:var(--g);margin-left:2px;animation:weBlink 1s steps(1) infinite;vertical-align:baseline}
 .tt-q .caret.h{height:1em;transform:translateY(.15em)}
 .tt-rule{width:60px;height:.5px;background:linear-gradient(to right,transparent,var(--g),transparent);margin:0 auto 12px;opacity:0}
@@ -172,7 +174,8 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 .cd-card{display:flex;flex-direction:column;align-items:center;padding:clamp(12px,2.4vw,20px) clamp(8px,2vw,16px);border:.5px solid rgba(198,155,60,.45);border-radius:4px;background:linear-gradient(180deg,rgba(255,253,247,.85),rgba(244,234,222,.55));box-shadow:0 8px 32px rgba(198,155,60,.12),inset 0 0 0 1px rgba(220,190,123,.18);min-width:clamp(64px,18vw,98px)}
 .cd-n{font-family:var(--fh);font-size:clamp(36px,10vw,72px);font-weight:400;line-height:1;letter-spacing:-.03em}
 .cd-l{font-family:var(--fb);font-size:clamp(8px,2vw,10px);font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gd);margin-top:6px}
-.cd-foot{font-family:var(--fh);font-size:clamp(14px,3.6vw,18px);font-weight:300;font-style:italic;color:var(--g);margin-top:24px;opacity:0;transform:translateY(10px)}
+.cd-foot{font-family:var(--fh);font-size:clamp(20px,5vw,28px);font-weight:400;font-style:italic;color:var(--w);margin-top:30px;line-height:1.25;opacity:0;transform:translateY(10px)}
+.cd-foot em{color:var(--g);font-style:italic}
 .sc8.on .cd-ey{animation:fi .8s ease .1s forwards}
 .sc8.on .cd-wrap{animation:fi 1s cubic-bezier(.16,1,.3,1) .4s forwards}
 .sc8.on .cd-foot{animation:fi .7s ease .9s forwards}
@@ -184,9 +187,9 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 
 .rev-stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:clamp(180px,32vw,260px);width:100%}
 .rev-wrap{position:relative;display:inline-block}
-.rev-old{position:relative;font-family:var(--fh);font-size:clamp(72px,22vw,130px);font-weight:400;color:var(--w);line-height:1;display:inline-block;opacity:0;transition:transform 1.1s cubic-bezier(.55,.05,.3,1.05),opacity 1.1s cubic-bezier(.55,.05,.3,1.05)}
+.rev-old{position:relative;font-family:var(--fh);font-size:clamp(72px,22vw,130px);font-weight:400;color:var(--w);line-height:1;display:inline-block;opacity:0;transition:transform 2.4s cubic-bezier(.42,.05,.25,1),opacity 2.4s cubic-bezier(.42,.05,.25,1)}
 .rev-old.show{opacity:1}
-.rev-old.spinout{transform:rotate(720deg) translate(140%,-30%) scale(.5);opacity:0}
+.rev-old.spinout{transform:rotate(1440deg) translate(180%,-40%) scale(.25);opacity:0}
 .rev-slash{position:absolute;top:48%;left:-10%;right:-10%;height:6px;background:linear-gradient(90deg,transparent 0%,#9A2424 8%,#C24A4A 30%,#E85F5F 50%,#C24A4A 70%,#9A2424 92%,transparent 100%);transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.5,0,.3,1);box-shadow:0 0 18px rgba(232,95,95,.7),0 0 6px rgba(154,36,36,.6);border-radius:3px}
 .rev-slash.cut{transform:scaleX(1)}
 
@@ -309,7 +312,8 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
   .fm-h{font-size:54px}
   .stn{font-size:54px}
   .stl{font-size:14px}
-  .bw{font-size:26px}
+  .bw-1{font-size:26px}
+  .bw-2{font-size:34px}
   .sc6-item{font-size:18px;padding:10px 0}
   .tt-q{font-size:17px}
   .cd-n{font-size:32px}
@@ -330,7 +334,8 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 .stn{font-size:clamp(80px,10vw,130px)}
   .stl{font-size:clamp(18px,2.2vw,26px)}
   .st-saved{font-size:clamp(28px,3vw,40px)}
-  .bw{font-size:clamp(40px,5vw,64px)}
+  .bw-1{font-size:clamp(40px,4.8vw,64px)}
+  .bw-2{font-size:clamp(56px,6.5vw,92px)}
   .sc6-h{font-size:clamp(38px,4.8vw,58px)}
   .sc6-item{font-size:clamp(22px,2.8vw,30px)}
   .tt-q{font-size:clamp(22px,2.6vw,32px)}
@@ -360,7 +365,8 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
   .inv-line{font-size:92px}
   .fm-h{font-size:148px}
   .stn{font-size:150px}
-  .bw{font-size:68px}
+  .bw-1{font-size:68px}
+  .bw-2{font-size:100px}
   .rev-new{font-size:200px}
   .a-h{font-size:68px}
   #eb2{max-width:480px}
@@ -398,8 +404,8 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 <div class="spkf" id="s2spk"></div>
 <div id="invWrap" style="position:relative;z-index:2;text-align:center;opacity:0;transform:scale(.95);transition:opacity 1s ease,transform 1s ease">
   <div class="inv-line">YOU ARE</div>
-  <div class="inv-line">OFFICIALLY</div>
-  <div class="inv-line">INVITED</div>
+  <div class="inv-line">OFFICIALLY INVITED</div>
+  <div class="inv-line">TO THE…</div>
 </div>
 </div>
 
@@ -408,7 +414,7 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 <div class="halo"></div>
 <div class="spkf" id="s3spk"></div>
 <div style="position:relative;z-index:2">
-<div class="fm-h-wrap"><div class="fm-h-glow"></div><h1 class="fm-h">The Women's<br>Coliving <em>Summit</em></h1></div>
+<div class="fm-h-wrap"><div class="fm-h-glow"></div><h1 class="fm-h">Women's<br>Coliving <em>Summit</em></h1></div>
 <div class="fm-fl"><i>✦</i></div>
 </div></div>
 
@@ -428,7 +434,8 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 <div class="halo"></div>
 <div class="spkf" id="s5spk"></div>
 <div style="position:relative;z-index:2">
-<div class="bw">A summit built<br>by women,<br><em class="gs">for women.</em></div>
+<div class="bw-1">A summit built by women,</div>
+<div class="bw-2">for women.</div>
 <div class="bw2">Atlanta, Georgia · October 2026</div>
 </div></div>
 
@@ -437,7 +444,7 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 <div class="halo"></div>
 <div class="spkf" id="s6spk"></div>
 <div style="position:relative;z-index:2">
-<div class="sc6-h">Two days of everything,<br><em>tailored to you.</em></div>
+<div class="sc6-h">Two days of connection,<br><em>tailored to you.</em></div>
 <div class="sc6-list">
   <div class="sc6-item">Industry-Leader Keynotes</div>
   <div class="sc6-item">Expert Operator Panels</div>
@@ -474,7 +481,7 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
   <div class="cd-card"><div class="cd-n gs" id="cdM">0</div><div class="cd-l">Mins</div></div>
   <div class="cd-card"><div class="cd-n gs" id="cdS">0</div><div class="cd-l">Secs</div></div>
 </div>
-<div class="cd-foot">October 16–17, 2026 · 9:00 AM · Atlanta</div>
+<div class="cd-foot"><em>October 16–17, 2026</em><br>Atlanta, Georgia</div>
 </div></div>
 
 <!-- S9 DRAMATIC $299 REVEAL -->
@@ -493,7 +500,6 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
   </div>
 </div>
 <div class="of-fl" id="ofFl">For this weekend only</div>
-<div class="of-pl" id="ofPl">+ entry to win a free ticket for a friend</div>
 </div></div>
 
 <!-- S10 RAFFLE TEASER -->
@@ -644,7 +650,11 @@ function runTypewriter(){
   const el=document.getElementById('ttQuote');
   if(!el)return;
   if(typeTimer){clearTimeout(typeTimer);typeTimer=null}
+  el.classList.remove('go');
   el.innerHTML='';
+  // Force a reflow so the empty state is committed before we start typing
+  void el.offsetWidth;
+  el.classList.add('go');
   // Segments: plain → highlight → plain. Highlight gets .gs class.
   const segments=[
     {text:"One of the best real estate events ",cls:null},
@@ -718,27 +728,28 @@ function stopCountdown(){if(cdTimer){clearInterval(cdTimer);cdTimer=null}}
 
 // ═══ DRAMATIC $299 REVEAL ═══
 function runPriceReveal(){
-  const old=document.getElementById('revOld'),slash=document.getElementById('revSlash'),fresh=document.getElementById('revNew'),glow=document.getElementById('revGlow'),fl=document.getElementById('ofFl'),pl=document.getElementById('ofPl');
+  const old=document.getElementById('revOld'),slash=document.getElementById('revSlash'),fresh=document.getElementById('revNew'),glow=document.getElementById('revGlow'),fl=document.getElementById('ofFl');
   // Reset
   old.className='rev-old';slash.className='rev-slash';fresh.className='rev-new';glow.className='rev-glow';
-  fl.className='of-fl';pl.className='of-pl';
+  fl.className='of-fl';
   fresh.style.opacity='';fresh.style.transform='';fresh.style.animation='';
   // Beat 1 — $399 appears large, alone on the page
   setTimeout(()=>{old.classList.add('show')},200);
   // Beat 2 — red slash carves across $399
   setTimeout(()=>{slash.classList.add('cut')},1200);
-  // Beat 3 — $399 spins off the page
+  // Beat 3 — $399 spins off the page (long, suspenseful — 2.4s)
   setTimeout(()=>{old.classList.add('spinout')},2300);
-  // Beat 4 — $299 rises up from below in glowing gold
-  setTimeout(()=>{fresh.classList.add('rise');glow.classList.add('go');fireworkBurst(2,220)},2700);
-  // Beat 5 — flash flash (double opacity pulse), then stays gold
-  setTimeout(()=>{fresh.style.opacity='.25'},3900);
-  setTimeout(()=>{fresh.style.opacity='1'},4050);
-  setTimeout(()=>{fresh.style.opacity='.25'},4250);
-  setTimeout(()=>{fresh.style.opacity='1'},4400);
+  // Beat 4 — $299 rises in glowing gold with a barrage of fireworks
+  setTimeout(()=>{fresh.classList.add('rise');glow.classList.add('go');fireworkBurst(5,180)},4500);
+  // Beat 5 — flash flash, then stays gold
+  setTimeout(()=>{fresh.style.opacity='.25'},5700);
+  setTimeout(()=>{fresh.style.opacity='1'},5850);
+  setTimeout(()=>{fresh.style.opacity='.25'},6050);
+  setTimeout(()=>{fresh.style.opacity='1'},6200);
+  // Another firework burst during the flash for extra punch
+  setTimeout(()=>{fireworkBurst(3,220)},5900);
   // Beat 6 — supporting copy fades in
-  setTimeout(()=>{fl.classList.add('show')},4800);
-  setTimeout(()=>{pl.classList.add('show')},5200);
+  setTimeout(()=>{fl.classList.add('show')},6700);
 }
 
 // ═══ CONFETTI / FIREWORKS ═══
@@ -759,7 +770,7 @@ const SCREENS=[1,2,3,4,5,6,7,8,9,10,11];
 const PAUSE=[11];          // Accept screen waits for user
 const DARK=[11];           // Dark dots on the accept screen
 // Times in ms — countdown is 3.5s to allow several visible ticks
-const TIME={2:4000,3:3500,4:6500,5:3500,6:8000,7:6500,8:3500,9:7500,10:7000};
+const TIME={2:4500,3:3500,4:6500,5:5500,6:8500,7:6500,8:6500,9:9500,10:7000};
 let ci=0,tmr=null;
 
 const dotsEl=document.getElementById('dots');
@@ -783,7 +794,7 @@ function goIdx(idx){
   if(cur===2){setTimeout(animInvite,200);setTimeout(()=>fireworkBurst(3,350),800)}
   if(cur===3){setTimeout(()=>fireworkBurst(2,260),350)}
   if(cur===4){runStats()}
-  if(cur===7){setTimeout(runTypewriter,400)}
+  if(cur===7){const ttq=document.getElementById('ttQuote');if(ttq){ttq.classList.remove('go');ttq.innerHTML=''}setTimeout(runTypewriter,400)}
   if(cur===8){startCountdown()}
   if(cur===9){runPriceReveal()}
 
