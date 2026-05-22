@@ -85,11 +85,6 @@ export default function Home() {
             October 16 – 17, 2026 · Atlanta, Georgia
           </div>
           <h1>Women&apos;s Coliving<br /><em className="gs">Summit</em></h1>
-          <p className="hero-b">Women building wealth — one room at a time.</p>
-          <p className="hero-s">
-            Two days of panels, workshops, and intentional community for women building real estate
-            portfolios through shared housing.
-          </p>
           <Countdown />
           <div className="hero-c">
             <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
