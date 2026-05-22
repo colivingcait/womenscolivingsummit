@@ -36,7 +36,6 @@ export default function Home() {
   const { openSponsor, openSpeaker } = useModals();
 
   useEffect(() => {
-    // Floating sparkles in hero
     const spk = document.querySelector('.hero-spk');
     if (spk && spk.childElementCount === 0) {
       for (let i = 0; i < 48; i++) {
@@ -47,7 +46,6 @@ export default function Home() {
         spk.appendChild(s);
       }
     }
-    // Subtle gold rain in hero
     const grn = document.querySelector('.grn-wrap');
     if (grn && grn.childElementCount === 0) {
       for (let i = 0; i < 28; i++) {
@@ -58,7 +56,6 @@ export default function Home() {
         grn.appendChild(p);
       }
     }
-    // Sparkles on wine sections
     document.querySelectorAll('.sect-spk').forEach(wrap => {
       if (wrap.childElementCount > 0) return;
       for (let i = 0; i < 36; i++) {
@@ -90,6 +87,7 @@ export default function Home() {
             <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <a href="#about" className="btn btn-ol">Learn More</a>
           </div>
+          <p className="hero-price">Tickets from <strong>$399</strong> · Limited seats</p>
           <div className="jn">
             <a href="#highlights" className="js">
               <div className="js-l">Oct 16 – 17</div>
@@ -111,52 +109,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="about" id="about">
+      {/* WHO IT'S FOR — self-qualify in first scroll */}
+      <section className="aud" id="about">
         <div className="si">
-          <div className="about-g">
-            <div className="about-t rv">
-              <div className="ey">About the Summit</div>
-              <h2>A room built by women,<br /><em className="gs">for women.</em></h2>
-              <p>
-                Coliving is one of the most powerful wealth-building tools in real estate — and women are
-                leading the way. The Women&apos;s Coliving Summit exists to give those women a room built
-                specifically for them. A space to learn from operators who&apos;ve done it, build
-                relationships that turn into partnerships, and walk away with the clarity and confidence
-                to take the next step.
-              </p>
-              <p>
-                WCS isn&apos;t about what women can&apos;t do in this industry. It&apos;s about what
-                happens when we create space to do it together — openly, strategically, and on our own
-                terms. Whether you&apos;re exploring your first deal or scaling a portfolio, this is
-                where you belong.
-              </p>
-              <Link href="/about" className="btn btn-o">Our Full Story</Link>
+          <div className="rv">
+            <div className="ey">Who It&apos;s For</div>
+            <h2>Is this <em className="gs">your room?</em></h2>
+            <p className="sb">WCS welcomes women at every stage of their coliving journey.</p>
+          </div>
+          <div className="aud-g">
+            <div className="aud-c rv d1">
+              <div className="cl">Stage 01</div>
+              <h3>The Explorer</h3>
+              <p>You&apos;ve been researching coliving and you&apos;re ready to take the leap. You want to learn the model, run your first numbers, and meet women who&apos;ve done it.</p>
             </div>
-            <div className="about-img rv d2">
-              <div className="about-img-inner" style={{padding:0,overflow:'hidden'}}>
-                <img src="/founders-together.png" alt="Caitlyn and Jasmine, WCS founders" style={{width:'100%',height:'100%',objectFit:'cover'}} />
-              </div>
+            <div className="aud-c rv d2">
+              <div className="cl">Stage 02</div>
+              <h3>The Builder</h3>
+              <p>You have your first property and you&apos;re ready to build systems, optimize operations, and scale with confidence and community behind you.</p>
+            </div>
+            <div className="aud-c rv d3">
+              <div className="cl">Stage 03</div>
+              <h3>The Operator</h3>
+              <p>You&apos;re running a portfolio and thinking bigger — more properties, new markets, better margins. You want strategic partnerships and high-level conversations.</p>
+            </div>
+            <div className="aud-c rv d4">
+              <div className="cl">Stage 04</div>
+              <h3>The Ally</h3>
+              <p>You work in a field that supports coliving — real estate, lending, furnishing, technology — and you want to connect with this audience directly.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* PHOTO STRIP — scrolling marquee between about and highlights */}
-      <div className="photo-strip">
-        <div className="photo-track">
-          <div className="photo-strip-item"><img src="/homepagestrip/homepage1.png" alt="" /></div>
-          <div className="photo-strip-item"><img src="/homepagestrip/homepage2.png" alt="" /></div>
-          <div className="photo-strip-item"><img src="/homepagestrip/homepage3.png" alt="" /></div>
-          <div className="photo-strip-item"><img src="/homepagestrip/homepage4.png" alt="" /></div>
-          <div className="photo-strip-item"><img src="/homepagestrip/homepage1.png" alt="" /></div>
-          <div className="photo-strip-item"><img src="/homepagestrip/homepage2.png" alt="" /></div>
-          <div className="photo-strip-item"><img src="/homepagestrip/homepage3.png" alt="" /></div>
-          <div className="photo-strip-item"><img src="/homepagestrip/homepage4.png" alt="" /></div>
+      {/* NUMBERS — quick credibility */}
+      <section className="nums">
+        <div className="nums-g">
+          <div className="nums-i rv"><div className="n">150+</div><div className="nl2">Attendees</div></div>
+          <div className="nums-i rv d1"><div className="n">2</div><div className="nl2">Full Days</div></div>
+          <div className="nums-i rv d2"><div className="n">15+</div><div className="nl2">Leaders &amp; Educators</div></div>
+          <div className="nums-i rv d3"><div className="n">2nd</div><div className="nl2">Annual Summit</div></div>
         </div>
-      </div>
+      </section>
 
-      {/* HIGHLIGHTS */}
+      {/* HIGHLIGHTS — what you get */}
       <section className="hl" id="highlights">
         <div className="sect-spk" />
         <div className="si">
@@ -203,7 +199,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AGENDA */}
+      {/* TESTIMONIALS — social proof right after value prop */}
+      <section className="tst">
+        <div className="sect-spk" />
+        <div className="si">
+          <div className="rv" style={{ textAlign: 'center', marginBottom: '8px' }}>
+            <div className="ey ey-l ey-c">What Attendees Say</div>
+            <h2>Don&apos;t take our <em>word</em> for it.</h2>
+          </div>
+          <div className="tst-g">
+            <Testimonial featured delay="d1" quote={`"I've been to a lot of real estate events, but this was the first one where every woman in the room actually understood what I'm building. The focus on women doing coliving specifically — not just real estate in general — made the networking feel effortless. I left with real connections, not just business cards."`} sub="Atlanta, GA" />
+            <Testimonial delay="d2" quote={`"The intimate setting made all the difference. It wasn't stuffy chairs in a row — it was real conversations with women at every stage of the coliving journey. The energy in that room was something I've never experienced at a conference before."`} sub="Virtual Attendee" />
+            <Testimonial delay="d3" quote={`"The panels were incredibly insightful — real perspectives on scaling operations, building community, and navigating the housing landscape. The breakout sessions gave me focused, hands-on learning and actionable takeaways I could apply to my own business immediately."`} sub="Coliving Operator" />
+            <Testimonial featured delay="d4" quote={`"One of the best real estate events I've ever been to. The speakers, the content, the networking, the venue — all of it was incredibly well put together. From a conversation to reality, these women are trailblazers and powerhouses."`} sub="Real Estate Investor" />
+          </div>
+        </div>
+      </section>
+
+      {/* PHOTO STRIP — see the room and the energy */}
+      <div className="photo-strip">
+        <div className="photo-track">
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage1.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage2.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage3.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage4.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage1.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage2.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage3.png" alt="" /></div>
+          <div className="photo-strip-item"><img src="/homepagestrip/homepage4.png" alt="" /></div>
+        </div>
+      </div>
+
+      {/* ABOUT — story lands after they already want in */}
+      <section className="about">
+        <div className="si">
+          <div className="about-g">
+            <div className="about-t rv">
+              <div className="ey">About the Summit</div>
+              <h2>A room built by women,<br /><em className="gs">for women.</em></h2>
+              <p>
+                Coliving is one of the most powerful wealth-building tools in real estate — and women are
+                leading the way. The Women&apos;s Coliving Summit exists to give those women a room built
+                specifically for them. A space to learn from operators who&apos;ve done it, build
+                relationships that turn into partnerships, and walk away with the clarity and confidence
+                to take the next step.
+              </p>
+              <p>
+                WCS isn&apos;t about what women can&apos;t do in this industry. It&apos;s about what
+                happens when we create space to do it together — openly, strategically, and on our own
+                terms. Whether you&apos;re exploring your first deal or scaling a portfolio, this is
+                where you belong.
+              </p>
+              <Link href="/about" className="btn btn-o">Our Full Story</Link>
+            </div>
+            <div className="about-img rv d2">
+              <div className="about-img-inner" style={{padding:0,overflow:'hidden'}}>
+                <img src="/founders-together.png" alt="Caitlyn and Jasmine, WCS founders" style={{width:'100%',height:'100%',objectFit:'cover'}} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AGENDA — for the committed researchers */}
       <section className="agd" id="agenda">
         <div className="si">
           <div className="rv">
@@ -225,16 +283,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NUMBERS */}
-      <section className="nums">
-        <div className="nums-g">
-          <div className="nums-i rv"><div className="n">150+</div><div className="nl2">Attendees</div></div>
-          <div className="nums-i rv d1"><div className="n">2</div><div className="nl2">Full Days</div></div>
-          <div className="nums-i rv d2"><div className="n">15+</div><div className="nl2">Leaders &amp; Educators</div></div>
-          <div className="nums-i rv d3"><div className="n">2nd</div><div className="nl2">Annual Summit</div></div>
-        </div>
-      </section>
-
       {/* COMMUNITY PHOTO */}
       <div className="comm-photo">
         <div className="comm-photo-inner" style={{padding:0,overflow:'hidden'}}>
@@ -242,39 +290,6 @@ export default function Home() {
         </div>
         <div className="comm-photo-overlay"></div>
       </div>
-
-      {/* AUDIENCE */}
-      <section className="aud">
-        <div className="si">
-          <div className="rv">
-            <div className="ey">Who It&apos;s For</div>
-            <h2>Your seat is <em className="gs">waiting.</em></h2>
-            <p className="sb">WCS welcomes women at every stage of their coliving journey.</p>
-          </div>
-          <div className="aud-g">
-            <div className="aud-c rv d1">
-              <div className="cl">Stage 01</div>
-              <h3>The Explorer</h3>
-              <p>You&apos;ve been researching coliving and you&apos;re ready to take the leap. You want to learn the model, run your first numbers, and meet women who&apos;ve done it.</p>
-            </div>
-            <div className="aud-c rv d2">
-              <div className="cl">Stage 02</div>
-              <h3>The Builder</h3>
-              <p>You have your first property and you&apos;re ready to build systems, optimize operations, and scale with confidence and community behind you.</p>
-            </div>
-            <div className="aud-c rv d3">
-              <div className="cl">Stage 03</div>
-              <h3>The Operator</h3>
-              <p>You&apos;re running a portfolio and thinking bigger — more properties, new markets, better margins. You want strategic partnerships and high-level conversations.</p>
-            </div>
-            <div className="aud-c rv d4">
-              <div className="cl">Stage 04</div>
-              <h3>The Ally</h3>
-              <p>You work in a field that supports coliving — real estate, lending, furnishing, technology — and you want to connect with this audience directly.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* SPEAKERS */}
       <section className="spk" id="speakers">
@@ -306,23 +321,6 @@ export default function Home() {
             Have a story, strategy, or framework worth sharing?
           </p>
           <button className="btn btn-o" onClick={openSpeaker}>Apply to Speak</button>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="tst">
-        <div className="sect-spk" />
-        <div className="si">
-          <div className="rv" style={{ textAlign: 'center', marginBottom: '8px' }}>
-            <div className="ey ey-l ey-c">What Attendees Say</div>
-            <h2>Don&apos;t take our <em>word</em> for it.</h2>
-          </div>
-          <div className="tst-g">
-            <Testimonial featured delay="d1" quote={`"I've been to a lot of real estate events, but this was the first one where every woman in the room actually understood what I'm building. The focus on women doing coliving specifically — not just real estate in general — made the networking feel effortless. I left with real connections, not just business cards."`} sub="Atlanta, GA" />
-            <Testimonial delay="d2" quote={`"The intimate setting made all the difference. It wasn't stuffy chairs in a row — it was real conversations with women at every stage of the coliving journey. The energy in that room was something I've never experienced at a conference before."`} sub="Virtual Attendee" />
-            <Testimonial delay="d3" quote={`"The panels were incredibly insightful — real perspectives on scaling operations, building community, and navigating the housing landscape. The breakout sessions gave me focused, hands-on learning and actionable takeaways I could apply to my own business immediately."`} sub="Coliving Operator" />
-            <Testimonial featured delay="d4" quote={`"One of the best real estate events I've ever been to. The speakers, the content, the networking, the venue — all of it was incredibly well put together. From a conversation to reality, these women are trailblazers and powerhouses."`} sub="Real Estate Investor" />
-          </div>
         </div>
       </section>
 
@@ -380,16 +378,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* FINAL CTA — price visible, decision moment */}
       <section className="cta-f">
         <div className="sect-spk" />
         <div className="si rv">
-          <div className="ey ey-l ey-c">October 16 – 17, 2026</div>
+          <div className="ey ey-l ey-c">October 16 – 17, 2026 · Atlanta</div>
           <h2>Build the room.<br /><em className="gs">Own the future.</em></h2>
           <p className="cb">
             150 women. Two days. The strategies, partnerships, and community you need to build wealth
             through coliving — all in one room in Atlanta.
           </p>
+          <div className="cta-price-badge">
+            <span className="cta-price-from">from</span>
+            <span className="cta-price-num gs">$399</span>
+            <span className="cta-price-note">· limited seats</span>
+          </div>
           <div className="cg">
             <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <button className="btn btn-ol" onClick={openSponsor}>Become a Sponsor</button>
