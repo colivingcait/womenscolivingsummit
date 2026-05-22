@@ -994,6 +994,11 @@ document.getElementById('refCopy').addEventListener('click',function(){
 
 // GO
 goIdx(0);
+
+// ═══ TEST TRIGGER — ?test=celebration fires the post-purchase overlay immediately ═══
+if(new URLSearchParams(location.search).get('test')==='celebration'){
+  setTimeout(celebrate,300);
+}
 </script>
 </body>
 </html>
