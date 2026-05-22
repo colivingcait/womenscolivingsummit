@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import Link from 'next/link';
 import { useModals } from '@/components/ModalProvider';
 import { FAQItem } from '@/components/FAQItem';
@@ -9,15 +10,42 @@ const speakerPlaceholders = Array.from({ length: 16 });
 export default function Home() {
   const { openSponsor, openSpeaker } = useModals();
 
+  useEffect(() => {
+    // Floating sparkles in hero
+    const spk = document.querySelector('.hero-spk');
+    if (spk && spk.childElementCount === 0) {
+      for (let i = 0; i < 48; i++) {
+        const s = document.createElement('div');
+        s.className = 'spkl';
+        const sz = 2 + Math.random() * 3.5;
+        s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;animation-duration:${2.5+Math.random()*4}s;animation-delay:${Math.random()*6}s`;
+        spk.appendChild(s);
+      }
+    }
+    // Subtle gold rain in hero
+    const grn = document.querySelector('.grn-wrap');
+    if (grn && grn.childElementCount === 0) {
+      for (let i = 0; i < 28; i++) {
+        const p = document.createElement('div');
+        p.className = 'grn-p';
+        const sz = 2 + Math.random() * 3;
+        p.style.cssText = `left:${Math.random()*100}%;width:${sz}px;height:${sz}px;animation-duration:${10+Math.random()*14}s;animation-delay:${Math.random()*12}s`;
+        grn.appendChild(p);
+      }
+    }
+  }, []);
+
   return (
     <>
       {/* HERO */}
       <section className="hero">
+        <div className="hero-spk" />
+        <div className="grn-wrap" />
         <div className="hero-i">
           <div className="ey ey-c" style={{ opacity: 0, animation: 'hr .8s cubic-bezier(.16,1,.3,1) .05s forwards' }}>
             October 16 – 17, 2026 · Atlanta, Georgia
           </div>
-          <h1>Women&apos;s Coliving<br /><em>Summit</em></h1>
+          <h1>Women&apos;s Coliving<br /><em className="gs">Summit</em></h1>
           <p className="hero-b">Women building wealth — one room at a time.</p>
           <p className="hero-s">
             Two days of panels, workshops, and intentional community for women building real estate
@@ -46,10 +74,10 @@ export default function Home() {
 
       {/* PHOTO STRIP */}
       <div className="photo-strip">
-        <div className="photo-strip-item">Group Photo 1</div>
-        <div className="photo-strip-item">Group Photo 2</div>
-        <div className="photo-strip-item">Group Photo 3</div>
-        <div className="photo-strip-item">Group Photo 4</div>
+        <div className="photo-strip-item"><img src="/homepagestrip/homepage1.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0}} /></div>
+        <div className="photo-strip-item"><img src="/homepagestrip/homepage2.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0}} /></div>
+        <div className="photo-strip-item"><img src="/homepagestrip/homepage3.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0}} /></div>
+        <div className="photo-strip-item"><img src="/homepagestrip/homepage4.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0}} /></div>
       </div>
 
       {/* ABOUT */}
@@ -58,7 +86,7 @@ export default function Home() {
           <div className="about-g">
             <div className="about-t rv">
               <div className="ey">About the Summit</div>
-              <h2>A room built by women,<br /><em>for women.</em></h2>
+              <h2>A room built by women,<br /><em className="gs">for women.</em></h2>
               <p>
                 Coliving is one of the most powerful wealth-building tools in real estate — and women are
                 leading the way. The Women&apos;s Coliving Summit exists to give those women a room built
@@ -75,9 +103,8 @@ export default function Home() {
               <Link href="/about" className="btn btn-o">Our Full Story</Link>
             </div>
             <div className="about-img rv d2">
-              <div className="about-img-inner">
-                <span>Founders Photo</span>
-                Caitlyn &amp; Jasmine
+              <div className="about-img-inner" style={{padding:0,overflow:'hidden'}}>
+                <img src="/founders-together.png" alt="Caitlyn and Jasmine, WCS founders" style={{width:'100%',height:'100%',objectFit:'cover'}} />
               </div>
             </div>
           </div>
@@ -89,7 +116,7 @@ export default function Home() {
         <div className="si">
           <div className="rv">
             <div className="ey ey-l">What to Expect</div>
-            <h2>Two days that change<br />how you <em>build.</em></h2>
+            <h2>Two days that change<br />how you <em className="gs">build.</em></h2>
             <p className="sb">
               Every session, connection, and conversation is designed to move your coliving business
               forward.
@@ -164,9 +191,8 @@ export default function Home() {
 
       {/* COMMUNITY PHOTO */}
       <div className="comm-photo">
-        <div className="comm-photo-inner">
-          <span>Wide Group Photo</span>
-          Full-width community photo from WCS
+        <div className="comm-photo-inner" style={{padding:0,overflow:'hidden'}}>
+          <img src="/wide-group1.png" alt="Women's Coliving Summit community" style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0}} />
         </div>
         <div className="comm-photo-overlay"></div>
       </div>
@@ -176,7 +202,7 @@ export default function Home() {
         <div className="si">
           <div className="rv">
             <div className="ey">Who It&apos;s For</div>
-            <h2>Your seat is <em>waiting.</em></h2>
+            <h2>Your seat is <em className="gs">waiting.</em></h2>
             <p className="sb">WCS welcomes women at every stage of their coliving journey.</p>
           </div>
           <div className="aud-g">
@@ -311,7 +337,7 @@ export default function Home() {
       <section className="cta-f">
         <div className="si rv">
           <div className="ey ey-l ey-c">October 16 – 17, 2026</div>
-          <h2>Build the room.<br /><em>Own the future.</em></h2>
+          <h2>Build the room.<br /><em className="gs">Own the future.</em></h2>
           <p className="cb">
             150 women. Two days. The strategies, partnerships, and community you need to build wealth
             through coliving — all in one room in Atlanta.
