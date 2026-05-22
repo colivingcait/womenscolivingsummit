@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { useModals } from '@/components/ModalProvider';
+import { SectionSparkles } from '@/components/SectionSparkles';
 
 export default function SponsorsPage() {
   const { openSponsor } = useModals();
@@ -52,6 +53,7 @@ export default function SponsorsPage() {
       </div>
 
       <section className="why-sponsor">
+        <SectionSparkles />
         <div className="si">
           <div className="rv">
             <div className="ey ey-l">Why Sponsor WCS</div>
@@ -122,6 +124,7 @@ export default function SponsorsPage() {
       </section>
 
       <section className="cta-band bg-wine">
+        <SectionSparkles count={28} />
         <div className="si rv">
           <div className="ey ey-l ey-c">October 16 – 17, 2026</div>
           <h2>Build the room.<br /><em>Own the future.</em></h2>

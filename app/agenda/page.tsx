@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SectionSparkles } from '@/components/SectionSparkles';
 
 export const metadata: Metadata = {
   title: "Agenda | Women's Coliving Summit 2026",
@@ -21,6 +22,7 @@ export default function AgendaPage() {
       </section>
 
       <section className="coming">
+        <SectionSparkles />
         <div className="si">
           <div className="rv">
             <div className="ey ey-l ey-c">WCS 2026</div>
@@ -180,6 +182,7 @@ export default function AgendaPage() {
       </section>
 
       <section className="cta-band bg-wine">
+        <SectionSparkles count={28} />
         <div className="si rv">
           <div className="ey ey-l ey-c">October 16 – 17, 2026</div>
           <h2>Build the room.<br /><em>Own the future.</em></h2>

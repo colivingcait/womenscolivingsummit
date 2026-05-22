@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { useModals } from '@/components/ModalProvider';
+import { SectionSparkles } from '@/components/SectionSparkles';
 
 const delayClasses = ['d1', 'd2', 'd3', 'd4'];
 
@@ -57,6 +58,7 @@ export default function SpeakersPage() {
       </div>
 
       <section className="spk-value">
+        <SectionSparkles />
         <div className="si">
           <div className="rv">
             <div className="ey ey-l">What Our Speakers Bring</div>
@@ -98,6 +100,7 @@ export default function SpeakersPage() {
       </section>
 
       <section className="cta-band bg-wine">
+        <SectionSparkles count={28} />
         <div className="si rv">
           <div className="ey ey-l ey-c">October 16 – 17, 2026</div>
           <h2>Build the room.<br /><em>Own the future.</em></h2>

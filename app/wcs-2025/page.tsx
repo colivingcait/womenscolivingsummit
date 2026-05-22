@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SectionSparkles } from '@/components/SectionSparkles';
 
 export const metadata: Metadata = {
   title: "WCS 2025 | Women's Coliving Summit",
@@ -20,6 +21,7 @@ export default function WCS2025Page() {
       </section>
 
       <section className="facts">
+        <SectionSparkles />
         <div className="si">
           <div className="rv" style={{ textAlign: 'center' }}>
             <div className="ey ey-l ey-c">By the Numbers</div>
@@ -101,6 +103,7 @@ export default function WCS2025Page() {
       </div>
 
       <section className="tst">
+        <SectionSparkles />
         <div className="si">
           <div className="rv" style={{ textAlign: 'center', marginBottom: '8px' }}>
             <div className="ey ey-l ey-c">In Their Words</div>
@@ -148,6 +151,7 @@ export default function WCS2025Page() {
       </section>
 
       <section className="cta-band bg-wine">
+        <SectionSparkles count={28} />
         <div className="si rv">
           <div className="ey ey-l ey-c">WCS 2026</div>
           <h2>This year, we&apos;re going <em>bigger.</em></h2>

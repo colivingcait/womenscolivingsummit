@@ -208,10 +208,10 @@ export default function Home() {
             <h2>Don&apos;t take our <em>word</em> for it.</h2>
           </div>
           <div className="tst-g">
-            <Testimonial featured delay="d1" quote={`"I've been to a lot of real estate events, but this was the first one where every woman in the room actually understood what I'm building. The focus on women doing coliving specifically — not just real estate in general — made the networking feel effortless. I left with real connections, not just business cards."`} sub="Atlanta, GA" />
-            <Testimonial delay="d2" quote={`"The intimate setting made all the difference. It wasn't stuffy chairs in a row — it was real conversations with women at every stage of the coliving journey. The energy in that room was something I've never experienced at a conference before."`} sub="Virtual Attendee" />
-            <Testimonial delay="d3" quote={`"The panels were incredibly insightful — real perspectives on scaling operations, building community, and navigating the housing landscape. The breakout sessions gave me focused, hands-on learning and actionable takeaways I could apply to my own business immediately."`} sub="Coliving Operator" />
-            <Testimonial featured delay="d4" quote={`"One of the best real estate events I've ever been to. The speakers, the content, the networking, the venue — all of it was incredibly well put together. From a conversation to reality, these women are trailblazers and powerhouses."`} sub="Real Estate Investor" />
+            <Testimonial featured delay="d1" quote={`"First event where every woman in the room actually understood what I'm building. I left with real connections — not business cards."`} sub="Atlanta, GA" />
+            <Testimonial delay="d2" quote={`"Not stuffy chairs in a row. Real conversations with women at every stage of the journey. The energy was unlike any conference I've been to."`} sub="Virtual Attendee" />
+            <Testimonial delay="d3" quote={`"Real perspectives on scaling, community, and the housing landscape. I walked out with takeaways I applied to my business that week."`} sub="Coliving Operator" />
+            <Testimonial featured delay="d4" quote={`"One of the best real estate events I've been to. Speakers, content, networking, venue — all of it. These women are powerhouses."`} sub="Real Estate Investor" />
           </div>
         </div>
       </section>

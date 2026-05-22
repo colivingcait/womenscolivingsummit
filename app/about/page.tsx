@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SectionSparkles } from '@/components/SectionSparkles';
 
 export const metadata: Metadata = {
   title: "About | Women's Coliving Summit 2026",
@@ -130,6 +131,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mission">
+        <SectionSparkles />
         <div className="si">
           <div className="rv" style={{ textAlign: 'center' }}>
             <div className="ey ey-l ey-c">Our Mission</div>
