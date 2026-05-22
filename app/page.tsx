@@ -1,9 +1,34 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useModals } from '@/components/ModalProvider';
 import { FAQItem } from '@/components/FAQItem';
+
+function Countdown() {
+  const target = new Date('2026-10-16T09:00:00');
+  const [t, setT] = useState({ d: 0, h: 0, m: 0, s: 0 });
+  useEffect(() => {
+    const tick = () => {
+      const diff = target.getTime() - Date.now();
+      if (diff <= 0) { setT({ d: 0, h: 0, m: 0, s: 0 }); return; }
+      setT({ d: Math.floor(diff / 86400000), h: Math.floor((diff % 86400000) / 3600000), m: Math.floor((diff % 3600000) / 60000), s: Math.floor((diff % 60000) / 1000) });
+    };
+    tick(); const id = setInterval(tick, 1000); return () => clearInterval(id);
+  }, []);
+  const fmt = (n: number) => String(n).padStart(2, '0');
+  return (
+    <div className="hero-cd">
+      <div className="hero-cd-i"><div className="hero-cd-n">{fmt(t.d)}</div><div className="hero-cd-l">days</div></div>
+      <div className="hero-cd-sep">·</div>
+      <div className="hero-cd-i"><div className="hero-cd-n">{fmt(t.h)}</div><div className="hero-cd-l">hrs</div></div>
+      <div className="hero-cd-sep">·</div>
+      <div className="hero-cd-i"><div className="hero-cd-n">{fmt(t.m)}</div><div className="hero-cd-l">min</div></div>
+      <div className="hero-cd-sep">·</div>
+      <div className="hero-cd-i"><div className="hero-cd-n">{fmt(t.s)}</div><div className="hero-cd-l">sec</div></div>
+    </div>
+  );
+}
 
 const speakerPlaceholders = Array.from({ length: 16 });
 
@@ -33,12 +58,26 @@ export default function Home() {
         grn.appendChild(p);
       }
     }
+    // Sparkles on wine sections
+    document.querySelectorAll('.sect-spk').forEach(wrap => {
+      if (wrap.childElementCount > 0) return;
+      for (let i = 0; i < 36; i++) {
+        const s = document.createElement('div');
+        s.className = 'spkl';
+        const sz = 1.5 + Math.random() * 3;
+        s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;animation-duration:${2+Math.random()*5}s;animation-delay:${Math.random()*7}s`;
+        wrap.appendChild(s);
+      }
+    });
   }, []);
 
   return (
     <>
       {/* HERO */}
       <section className="hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/hero-wcs.jpg" alt="" className="hero-bg-img" aria-hidden="true" />
+        <div className="hero-bg-overlay" />
         <div className="hero-spk" />
         <div className="grn-wrap" />
         <div className="hero-i">
@@ -51,9 +90,10 @@ export default function Home() {
             Two days of panels, workshops, and intentional community for women building real estate
             portfolios through shared housing.
           </p>
+          <Countdown />
           <div className="hero-c">
             <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
-            <a href="#about" className="btn btn-o">Learn More</a>
+            <a href="#about" className="btn btn-ol">Learn More</a>
           </div>
           <div className="jn">
             <a href="#highlights" className="js">
@@ -69,6 +109,10 @@ export default function Home() {
               <div className="js-t">150 Women Strong</div>
             </a>
           </div>
+        </div>
+        <div className="hero-scroll">
+          <div className="hero-scroll-line" />
+          <span>scroll</span>
         </div>
       </section>
 
@@ -113,6 +157,7 @@ export default function Home() {
 
       {/* HIGHLIGHTS */}
       <section className="hl" id="highlights">
+        <div className="sect-spk" />
         <div className="si">
           <div className="rv">
             <div className="ey ey-l">What to Expect</div>
@@ -265,6 +310,7 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
       <section className="tst">
+        <div className="sect-spk" />
         <div className="si">
           <div className="rv" style={{ textAlign: 'center', marginBottom: '8px' }}>
             <div className="ey ey-l ey-c">What Attendees Say</div>
@@ -335,6 +381,7 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section className="cta-f">
+        <div className="sect-spk" />
         <div className="si rv">
           <div className="ey ey-l ey-c">October 16 – 17, 2026</div>
           <h2>Build the room.<br /><em className="gs">Own the future.</em></h2>
