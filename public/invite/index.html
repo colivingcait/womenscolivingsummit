@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>You're Invited | Women's Coliving Summit 2026</title>
+<title>A Special Invitation | Women's Coliving Summit 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--w:#58303d;--wd:#3d2029;--g:#C69B3C;--gl:#DCBE7B;--gd:#9E7A2A;--iv:#F4EADE;--cream:#FEFCF9;--fh:'Cormorant Garamond',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif}
@@ -427,8 +427,8 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
     <div class="env-welcome-wrap"><div class="env-welcome gs">Welcome</div></div>
     <div class="env-rule"><i>✦</i></div>
     <div class="env-prefix">A special invitation for</div>
-    <div class="env-group" id="envGroup">National Coliving Conference</div>
-    <div class="env-suffix">Attendees</div>
+    <div class="env-group" id="envFor">a friend</div>
+    <div class="env-suffix" id="envFromWrap">from <span id="envFrom">a friend</span></div>
   </div></div>
   <div class="env-face env-back">
     <div class="env-flap" id="flap"></div>
@@ -528,17 +528,17 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 <div class="halo"></div>
 <div class="spkf" id="s9spk"></div>
 <div style="max-width:520px;width:100%;position:relative;z-index:2">
-<div class="of-ey">NCC Exclusive</div>
+<div class="of-ey">A Friend-of-the-Summit Gift</div>
 <div class="rev-stage">
   <div class="rev-wrap">
     <div class="rev-old" id="revOld">$399<div class="rev-slash" id="revSlash"></div></div>
   </div>
   <div class="rev-new-wrap">
     <div class="rev-glow" id="revGlow"></div>
-    <div class="rev-new" id="revNew">$299</div>
+    <div class="rev-new" id="revNew">$349</div>
   </div>
 </div>
-<div class="of-fl" id="ofFl">For this weekend only</div>
+<div class="of-fl" id="ofFl">Save $50 with code FRIEND50</div>
 </div></div>
 
 <!-- S10 RAFFLE TEASER -->
@@ -579,7 +579,7 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
   <div class="cel-h gs">You're <em>in!</em></div>
   <div class="cel-tag gs">Welcome to the room.</div>
   <div class="cel-dt">FRIDAY &amp; SATURDAY · OCTOBER 16–17, 2026 · ATLANTA</div>
-  <div class="cel-msg">Next stop: <strong>She Leads Coliving</strong> on Facebook — our private group where we'll announce the lucky winner of the <em>Bestie Pass</em> (a free ticket for a friend).</div>
+  <div class="cel-msg">Next stop: <strong>She Leads Coliving</strong> on Facebook — our private group of women operators and investors building shared housing together.</div>
   <div class="cel-btns">
     <a href="https://www.facebook.com/groups/1407759770477235/" target="_blank" rel="noopener" class="cel-fb" id="celFbBtn">Join She Leads Coliving on Facebook</a>
     <button class="cel-link" id="celAlready" type="button">I'm already in the She Leads group →</button>
@@ -637,9 +637,15 @@ html,body{height:100%;overflow:hidden;background:var(--cream);-webkit-font-smoot
 
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 <script>
-// ═══ SWAPPABLE GROUP NAME ═══
-const ATTENDEE_GROUP = 'National Coliving Conference'; // edit to retarget for other groups
-document.getElementById('envGroup').textContent = ATTENDEE_GROUP;
+// ═══ PERSONALIZATION via URL params ═══
+// Example: /invite?from=Maddie&for=Sarah
+const _qs=new URLSearchParams(location.search);
+const INVITE_FOR=(_qs.get('for')||'').trim();
+const INVITE_FROM=(_qs.get('from')||'').trim();
+if(INVITE_FOR)document.getElementById('envFor').textContent=INVITE_FOR;
+if(INVITE_FROM)document.getElementById('envFrom').textContent=INVITE_FROM;
+// If no referrer is given, hide the "from" line entirely so the envelope still reads clean
+if(!INVITE_FROM)document.getElementById('envFromWrap').style.display='none';
 
 // ═══ EVENTBRITE CHECKOUT ═══
 function celebrate(){
@@ -649,7 +655,7 @@ function celebrate(){
   for(let w=0;w<6;w++)setTimeout(()=>firework(true),200+w*400);
 }
 function setCelStep(n){document.querySelectorAll('.cstep').forEach(s=>s.classList.toggle('show',s.dataset.step===String(n)))}
-window.EBWidgets.createWidget({widgetType:'checkout',eventId:'1986277433272',modal:true,modalTriggerElementId:'eb2',onOrderComplete:celebrate,promoCode:'NCC'});
+window.EBWidgets.createWidget({widgetType:'checkout',eventId:'1986277433272',modal:true,modalTriggerElementId:'eb2',onOrderComplete:celebrate,promoCode:'FRIEND50'});
 // Pre-celebration burst when they tap YES — even before checkout completes
 document.getElementById('eb2').addEventListener('click',function(){fireworkBurst(3,200)});
 </script>
@@ -829,11 +835,11 @@ function firework(onCelebration){
 function fireworkBurst(n,gap){for(let i=0;i<n;i++)setTimeout(()=>firework(false),i*(gap||280))}
 
 // ═══ SCREEN MANAGER ═══
-const SCREENS=[1,2,3,4,5,6,7,8,9,10,11];
-const PAUSE=[11];          // Accept screen waits for user
-const DARK=[11];           // Dark dots on the accept screen
-// Times in ms — countdown is 3.5s to allow several visible ticks
-const TIME={2:4500,3:5500,4:6500,5:7000,6:8500,7:6500,8:6500,9:9500,10:7000};
+// Friend version skips the NCC-only raffle teaser (screen 10)
+const SCREENS=[1,2,3,4,5,6,7,8,9,11];
+const PAUSE=[11];
+const DARK=[11];
+const TIME={2:4500,3:5500,4:6500,5:7000,6:8500,7:6500,8:6500,9:9500};
 let ci=0,tmr=null;
 
 const dotsEl=document.getElementById('dots');
