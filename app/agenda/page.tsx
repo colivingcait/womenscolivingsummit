@@ -1,10 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+const title = "Agenda";
+const description =
+  "Two days, intentionally designed — from foundation to scaling. See last year's agenda and what's coming for WCS 2026.";
+
 export const metadata: Metadata = {
-  title: "Agenda | Women's Coliving Summit 2026",
-  description:
-    "The WCS 2026 agenda is coming soon. See last year's intentionally designed two-day schedule — from foundation to scaling — and imagine what's next.",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: '/agenda',
+    images: [{ url: '/hero-wcs.jpg', width: 1638, height: 1086, alt: "Women's Coliving Summit agenda" }],
+  },
+  twitter: { card: 'summary_large_image', title, description, images: ['/hero-wcs.jpg'] },
 };
 
 export default function AgendaPage() {

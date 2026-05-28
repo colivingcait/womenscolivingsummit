@@ -1,10 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+const title = "About";
+const description =
+  "Meet the women behind the Women's Coliving Summit — Caitlyn Verdugo and Jasmine Brown. Why we built this room and what drives our mission.";
+
 export const metadata: Metadata = {
-  title: "About | Women's Coliving Summit 2026",
-  description:
-    "Meet the women behind the Women's Coliving Summit — Caitlyn Verdugo and Jasmine Brown. Learn why we built this room and what drives our mission.",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: '/about',
+    images: [{ url: '/founders-together.png', width: 684, height: 1082, alt: 'Caitlyn and Jasmine, WCS co-founders' }],
+  },
+  twitter: { card: 'summary_large_image', title, description, images: ['/founders-together.png'] },
 };
 
 export default function AboutPage() {

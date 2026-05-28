@@ -26,13 +26,41 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Women's Coliving Summit 2026 | Women building wealth — one room at a time.",
+  metadataBase: new URL('https://womenscolivingsummit.com'),
+  title: {
+    default: "Women's Coliving Summit 2026 | Atlanta · Oct 16–17",
+    template: "%s | Women's Coliving Summit 2026",
+  },
   description:
-    "The Women's Coliving Summit is a two-day conference in Atlanta for women investors and operators building wealth through shared housing. October 16–17, 2026.",
+    "Two days with the women building, scaling, and investing in coliving. October 16–17, 2026 in Atlanta. The only summit of its kind.",
   icons: {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     shortcut: '/favicon.svg',
     apple: '/favicon.svg',
+  },
+  openGraph: {
+    type: 'website',
+    siteName: "Women's Coliving Summit",
+    title: "Women's Coliving Summit 2026 | Atlanta · Oct 16–17",
+    description:
+      "Two days with the women building, scaling, and investing in coliving. October 16–17, 2026 in Atlanta. The only summit of its kind.",
+    url: 'https://womenscolivingsummit.com',
+    locale: 'en_US',
+    images: [
+      {
+        url: '/hero-wcs.jpg',
+        width: 1638,
+        height: 1086,
+        alt: "Women's Coliving Summit 2026",
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Women's Coliving Summit 2026 | Atlanta · Oct 16–17",
+    description:
+      "Two days with the women building, scaling, and investing in coliving. October 16–17, 2026 in Atlanta.",
+    images: ['/hero-wcs.jpg'],
   },
 };
 

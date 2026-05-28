@@ -1,10 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+const title = "WCS 2025";
+const description =
+  "Look back at the inaugural Women's Coliving Summit — a sold-out, two-day event that brought together 75 women building wealth through coliving.";
+
 export const metadata: Metadata = {
-  title: "WCS 2025 | Women's Coliving Summit",
-  description:
-    "Look back at the inaugural Women's Coliving Summit — a sold-out, two-day event that brought together 75 women building wealth through coliving.",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: '/wcs-2025',
+    images: [{ url: '/wide-group1.png', width: 1640, height: 1050, alt: 'WCS 2025 community' }],
+  },
+  twitter: { card: 'summary_large_image', title, description, images: ['/wide-group1.png'] },
 };
 
 export default function WCS2025Page() {
