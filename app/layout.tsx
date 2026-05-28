@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   title: "Women's Coliving Summit 2026 | Women building wealth — one room at a time.",
   description:
     "The Women's Coliving Summit is a two-day conference in Atlanta for women investors and operators building wealth through shared housing. October 16–17, 2026.",
+  icons: {
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
