@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/go", "destination": "/ncc/", "permanent": true },
+    { "source": "/go/", "destination": "/ncc/", "permanent": true }
+  ]
+}
