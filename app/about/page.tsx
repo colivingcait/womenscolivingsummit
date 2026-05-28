@@ -88,7 +88,10 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="founder-card rv d2">
-              <div className="founder-photo"><span>Headshot</span>Jasmine Brown</div>
+              <div className="founder-photo">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/jasmine-headshot.jpg" alt="Jasmine Brown, co-founder of Women's Coliving Summit" style={{objectPosition:'center 20%'}} />
+              </div>
               <h3>Jasmine Brown</h3>
               <div className="founder-title">
                 Real Estate Developer, Hard Money Lender <em style={{ fontStyle: 'italic', textTransform: 'none', letterSpacing: 0 }}>|</em> Co-Founder, Women&apos;s Coliving Summit
