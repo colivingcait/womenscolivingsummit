@@ -7,13 +7,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  openGraph: {
-    title,
-    description,
-    url: '/speakers',
-    images: [{ url: '/wide-group1.png', width: 1640, height: 1050, alt: "WCS speakers and community" }],
-  },
-  twitter: { card: 'summary_large_image', title, description, images: ['/wide-group1.png'] },
+  openGraph: { title, description, url: '/speakers' },
+  twitter: { card: 'summary_large_image', title, description },
 };
 
 export default function SpeakersLayout({ children }: { children: React.ReactNode }) {

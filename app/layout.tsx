@@ -46,21 +46,12 @@ export const metadata: Metadata = {
       "Two days with the women building, scaling, and investing in coliving. October 16–17, 2026 in Atlanta. The only summit of its kind.",
     url: 'https://womenscolivingsummit.com',
     locale: 'en_US',
-    images: [
-      {
-        url: '/hero-wcs.jpg',
-        width: 1638,
-        height: 1086,
-        alt: "Women's Coliving Summit 2026",
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Women's Coliving Summit 2026 | Atlanta · Oct 16–17",
     description:
       "Two days with the women building, scaling, and investing in coliving. October 16–17, 2026 in Atlanta.",
-    images: ['/hero-wcs.jpg'],
   },
 };
 

@@ -8,13 +8,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  openGraph: {
-    title,
-    description,
-    url: '/wcs-2025',
-    images: [{ url: '/wide-group1.png', width: 1640, height: 1050, alt: 'WCS 2025 community' }],
-  },
-  twitter: { card: 'summary_large_image', title, description, images: ['/wide-group1.png'] },
+  openGraph: { title, description, url: '/wcs-2025' },
+  twitter: { card: 'summary_large_image', title, description },
 };
 
 export default function WCS2025Page() {

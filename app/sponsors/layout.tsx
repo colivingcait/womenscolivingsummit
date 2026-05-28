@@ -7,13 +7,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  openGraph: {
-    title,
-    description,
-    url: '/sponsors',
-    images: [{ url: '/hero-wcs.jpg', width: 1638, height: 1086, alt: "WCS sponsors" }],
-  },
-  twitter: { card: 'summary_large_image', title, description, images: ['/hero-wcs.jpg'] },
+  openGraph: { title, description, url: '/sponsors' },
+  twitter: { card: 'summary_large_image', title, description },
 };
 
 export default function SponsorsLayout({ children }: { children: React.ReactNode }) {

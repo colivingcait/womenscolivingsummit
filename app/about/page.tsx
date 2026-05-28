@@ -8,13 +8,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  openGraph: {
-    title,
-    description,
-    url: '/about',
-    images: [{ url: '/founders-together.png', width: 684, height: 1082, alt: 'Caitlyn and Jasmine, WCS co-founders' }],
-  },
-  twitter: { card: 'summary_large_image', title, description, images: ['/founders-together.png'] },
+  openGraph: { title, description, url: '/about' },
+  twitter: { card: 'summary_large_image', title, description },
 };
 
 export default function AboutPage() {

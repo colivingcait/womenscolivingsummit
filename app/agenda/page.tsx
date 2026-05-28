@@ -8,13 +8,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  openGraph: {
-    title,
-    description,
-    url: '/agenda',
-    images: [{ url: '/hero-wcs.jpg', width: 1638, height: 1086, alt: "Women's Coliving Summit agenda" }],
-  },
-  twitter: { card: 'summary_large_image', title, description, images: ['/hero-wcs.jpg'] },
+  openGraph: { title, description, url: '/agenda' },
+  twitter: { card: 'summary_large_image', title, description },
 };
 
 export default function AgendaPage() {
