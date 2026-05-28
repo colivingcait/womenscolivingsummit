@@ -1,4 +1,6 @@
 import { ImageResponse } from 'next/og';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
 
 export const alt = "Women's Coliving Summit 2026 — Atlanta, October 16–17";
 export const size = { width: 1200, height: 630 };
@@ -22,6 +24,12 @@ const SPARKLES = [
 ];
 
 export default async function Image() {
+  const fontsDir = join(process.cwd(), 'app/fonts');
+  const [cormorant, cormorantItalic] = await Promise.all([
+    readFile(join(fontsDir, 'CormorantGaramond-Medium.ttf')),
+    readFile(join(fontsDir, 'CormorantGaramond-Italic.ttf')),
+  ]);
+
   return new ImageResponse(
     (
       <div
@@ -33,7 +41,7 @@ export default async function Image() {
           alignItems: 'center',
           justifyContent: 'center',
           background: 'linear-gradient(160deg, #3d2029 0%, #1a0810 50%, #3d2029 100%)',
-          fontFamily: 'Georgia, serif',
+          fontFamily: 'Cormorant Garamond, Georgia, serif',
           color: '#F4EADE',
           position: 'relative',
           padding: 60,
@@ -185,6 +193,10 @@ export default async function Image() {
     ),
     {
       ...size,
+      fonts: [
+        { name: 'Cormorant Garamond', data: cormorant, weight: 500, style: 'normal' },
+        { name: 'Cormorant Garamond', data: cormorantItalic, weight: 400, style: 'italic' },
+      ],
     }
   );
 }
