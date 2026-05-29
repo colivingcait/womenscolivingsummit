@@ -84,7 +84,7 @@ export default function Home() {
           <h1>Women&apos;s Coliving<br /><em className="gs">Summit</em></h1>
           <Countdown />
           <div className="hero-c">
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <a href="#about" className="btn btn-ol">Learn More</a>
           </div>
           <p className="hero-price">Tickets from <strong>$399</strong> · Limited seats</p>
@@ -394,7 +394,7 @@ export default function Home() {
             <span className="cta-price-note">· limited seats</span>
           </div>
           <div className="cg">
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <button className="btn btn-ol" onClick={openSponsor}>Become a Sponsor</button>
           </div>
         </div>

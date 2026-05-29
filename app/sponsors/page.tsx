@@ -115,7 +115,7 @@ export default function SponsorsPage() {
           <h2>Build the room.<br /><em>Own the future.</em></h2>
           <p>Whether you&apos;re attending or sponsoring — there&apos;s a place for you in this room.</p>
           <div className="cg">
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <Link href="/about" className="btn btn-ol">Our Story</Link>
           </div>
         </div>

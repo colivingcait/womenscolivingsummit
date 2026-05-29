@@ -684,7 +684,7 @@ function setCelStep(n){document.querySelectorAll('.cstep').forEach(s=>s.classLis
 
 // Primary: Eventbrite onOrderComplete callback
 try{
-  window.EBWidgets.createWidget({widgetType:'checkout',eventId:'1986277433272',modal:true,modalTriggerElementId:'eb2',onOrderComplete:celebrate,promoCode:'NCC'});
+  window.EBWidgets.createWidget({widgetType:'checkout',eventId:'1986578238990',modal:true,modalTriggerElementId:'eb2',onOrderComplete:celebrate,promoCode:'NCC'});
 }catch(err){console.error('WCS: EBWidgets.createWidget failed',err)}
 
 // Backup: catch the postMessage that Eventbrite's iframe fires on order completion

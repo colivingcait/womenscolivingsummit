@@ -161,7 +161,7 @@ export default function WCS2025Page() {
             room that started it all — now twice the size.
           </p>
           <div className="cg">
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My 2026 Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank" rel="noreferrer" className="btn btn-g">Get My 2026 Ticket</a>
             <Link href="/agenda" className="btn btn-ol">View the 2026 Agenda</Link>
           </div>
         </div>

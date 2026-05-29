@@ -54,7 +54,7 @@ export function Footer() {
           <div className="fc">
             <h4>Get Involved</h4>
             <ul>
-              <li><a href="https://www.eventbrite.com" target="_blank" rel="noreferrer">Buy Tickets</a></li>
+              <li><a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank" rel="noreferrer">Buy Tickets</a></li>
               <li><button type="button" onClick={openSponsor}>Sponsor WCS</button></li>
               <li><button type="button" onClick={openSpeaker}>Apply to Speak</button></li>
             </ul>

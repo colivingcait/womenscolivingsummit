@@ -39,7 +39,7 @@ export function Nav() {
           <li><Link href="/faq" onClick={closeMenu}>FAQ</Link></li>
           <li>
             <a
-              href="https://www.eventbrite.com"
+              href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios"
               target="_blank"
               rel="noreferrer"
               className="btn btn-g"

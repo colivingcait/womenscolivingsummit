@@ -50,7 +50,7 @@ export default function AgendaPage() {
           </div>
           <div className="coming-cta rv d2">
             <p>Sign up for updates and be the first to see the full 2026 agenda.</p>
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
           </div>
         </div>
       </section>
@@ -178,7 +178,7 @@ export default function AgendaPage() {
           <h2>Build the room.<br /><em>Own the future.</em></h2>
           <p>Secure your seat now and be the first to experience the 2026 agenda when it drops this summer.</p>
           <div className="cg">
-            <a href="https://www.eventbrite.com" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <Link href="/wcs-2025" className="btn btn-ol">See WCS 2025</Link>
           </div>
         </div>
