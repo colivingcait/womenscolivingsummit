@@ -40,7 +40,7 @@ export default function FAQPage() {
             </FAQItem>
             <FAQItem question="How much are tickets?" delayClass="d3">
               Ticket pricing and tiers are available on our ticketing page.{' '}
-              <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank" rel="noreferrer">
+              <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990" target="_blank" rel="noreferrer">
                 View tickets and pricing here.
               </a>
             </FAQItem>
@@ -116,7 +116,7 @@ export default function FAQPage() {
           <h2>Build the room.<br /><em>Own the future.</em></h2>
           <p>Got your answers? Now get your ticket.</p>
           <div className="cg">
-            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
+            <a href="https://www.eventbrite.com/e/the-womens-coliving-summit-atlanta-2026-tickets-1986578238990" target="_blank" rel="noreferrer" className="btn btn-g">Get My Ticket</a>
             <Link href="/wcs-2025" className="btn btn-ol">See WCS 2025</Link>
           </div>
         </div>
