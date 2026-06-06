@@ -1,6 +1,6 @@
 {
   "redirects": [
-    { "source": "/go", "destination": "/ncc/", "permanent": true },
-    { "source": "/go/", "destination": "/ncc/", "permanent": true }
+    { "source": "/go", "destination": "https://www.facebook.com/groups/1407759770477235/", "permanent": false },
+    { "source": "/go/", "destination": "https://www.facebook.com/groups/1407759770477235/", "permanent": false }
   ]
 }
