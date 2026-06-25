@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { HeroSparkles } from '@/components/HeroSparkles';
 
 const CALENDLY = 'https://calendly.com/colivingcait/sponsor-partner';
 const START = '/sponsor-partners/start';
@@ -14,10 +15,15 @@ function Star({ tone, label }: { tone: string; label: string }) {
   );
 }
 
-function CtaRow() {
+function CtaRow({ onDark = false }: { onDark?: boolean }) {
   return (
     <div className="sp-cta-row">
-      <a href={CALENDLY} target="_blank" rel="noreferrer" className="btn btn-o">
+      <a
+        href={CALENDLY}
+        target="_blank"
+        rel="noreferrer"
+        className={`btn ${onDark ? 'btn-ol' : 'btn-o'}`}
+      >
         Book a Call
       </a>
       <Link href={START} className="btn btn-g">
@@ -30,22 +36,36 @@ function CtaRow() {
 export default function SponsorPartnersPage() {
   return (
     <>
-      {/* 1 — HERO */}
-      <section className="page-hero">
-        <div className="ey ey-c">Sponsorship</div>
-        <h1>
-          Partner with the <em>Women&apos;s Coliving Summit</em>
-        </h1>
-        <p className="hero-sub">
-          Put your brand in front of women-led coliving operators and investors — roughly 125–150
-          qualified, decision-ready attendees — over two focused days.
-        </p>
-        <div className="sp-hero-meta">
-          <span>Atlanta, GA</span>
-          <span>October 16–17, 2026</span>
-          <span>125–150 Attendees</span>
+      {/* 1 — HERO (wine + gold sparkles over photo) */}
+      <section className="hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/hero-wcs.jpg" alt="" className="hero-bg-img" aria-hidden="true" />
+        <div className="hero-bg-overlay" />
+        <HeroSparkles />
+        <div className="hero-i">
+          <div
+            className="ey ey-c"
+            style={{ opacity: 0, animation: 'hr .8s cubic-bezier(.16,1,.3,1) .05s forwards' }}
+          >
+            Sponsorship · Atlanta · October 16 – 17, 2026
+          </div>
+          <h1>
+            Partner with the <em className="gs">Women&apos;s Coliving Summit</em>
+          </h1>
+          <p className="hero-b">
+            Put your brand in front of women-led coliving operators and real estate investors —
+            approximately 150 qualified, decision-ready attendees over two focused days of
+            interaction and growth.
+          </p>
+          <div className="hero-c">
+            <a href={CALENDLY} target="_blank" rel="noreferrer" className="btn btn-ol">
+              Book a Call
+            </a>
+            <Link href={START} className="btn btn-g">
+              Become a Sponsor
+            </Link>
+          </div>
         </div>
-        <CtaRow />
       </section>
 
       {/* 2 — TIERS */}
@@ -54,7 +74,7 @@ export default function SponsorPartnersPage() {
           <div className="sp-head rv">
             <div className="ey ey-c">Partnership Levels</div>
             <h2>
-              Three ways to <em>show up.</em>
+              Three ways to put your brand <em>front and center.</em>
             </h2>
             <p>
               Each tier is built to put your brand in front of the room. Pick the level that fits —
@@ -89,8 +109,33 @@ export default function SponsorPartnersPage() {
               </p>
             </div>
 
+            {/* GOLD (highlighted, center) */}
+            <div className="sp-tier gold rv d2">
+              <div className="sp-badge">Only 3 spots available</div>
+              <Star tone="#C69B3C" label="Gold tier" />
+              <div className="sp-tier-name">Gold Sponsor</div>
+              <div className="sp-tier-price">$4,500</div>
+              <div className="sp-tier-tag">Premier positioning + take the stage</div>
+              <p className="sp-tier-sub">
+                Our top-tier partnership. Everything in Silver, plus the room&apos;s attention.
+              </p>
+              <div className="sp-tier-lead">Everything in the Silver Package, plus:</div>
+              <ul className="sp-tier-list">
+                <li>30-minute educational speaking slot on a relevant, pre-approved topic</li>
+                <li>
+                  A crowd-interaction opportunity — panel seat or breakout session — for real
+                  conversation with attendees
+                </li>
+                <li>Premium front-of-room placement for your logo and banner</li>
+                <li>
+                  1 additional complimentary event pass <strong>(3 total)</strong>
+                </li>
+                <li>First right of refusal on category exclusivity</li>
+              </ul>
+            </div>
+
             {/* SILVER */}
-            <div className="sp-tier silver rv d2">
+            <div className="sp-tier silver rv d3">
               <Star tone="#B7A8AC" label="Silver tier" />
               <div className="sp-tier-name">Silver Sponsor</div>
               <div className="sp-tier-price">$3,500</div>
@@ -113,31 +158,6 @@ export default function SponsorPartnersPage() {
                 </li>
                 <li>Promotional item included in the attendee gift bags</li>
                 <li>Attendee registration list (opt-in only) for post-event outreach</li>
-              </ul>
-            </div>
-
-            {/* GOLD */}
-            <div className="sp-tier gold rv d3">
-              <div className="sp-badge">Only 3 spots available</div>
-              <Star tone="#C69B3C" label="Gold tier" />
-              <div className="sp-tier-name">Gold Sponsor</div>
-              <div className="sp-tier-price">$4,500</div>
-              <div className="sp-tier-tag">Premier positioning + the stage</div>
-              <p className="sp-tier-sub">
-                Our top-tier partnership. Everything in Silver, plus the room&apos;s attention.
-              </p>
-              <div className="sp-tier-lead">Everything in the Silver Package, plus:</div>
-              <ul className="sp-tier-list">
-                <li>30-minute educational speaking slot on a relevant, pre-approved topic</li>
-                <li>
-                  A crowd-interaction moment — panel seat or breakout session — for real
-                  conversation with attendees
-                </li>
-                <li>Premium front-of-room placement for your logo and banner</li>
-                <li>
-                  1 additional complimentary event pass <strong>(3 total)</strong>
-                </li>
-                <li>First right of refusal on category exclusivity</li>
               </ul>
             </div>
           </div>
