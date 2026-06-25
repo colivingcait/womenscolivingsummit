@@ -83,30 +83,31 @@ export default function SponsorPartnersPage() {
           </div>
 
           <div className="sp-grid">
-            {/* BRONZE */}
-            <div className="sp-tier bronze rv d1">
-              <Star tone="#A9774B" label="Bronze tier" />
-              <div className="sp-tier-name">Bronze Sponsor</div>
-              <div className="sp-tier-price">$750</div>
-              <div className="sp-tier-tag">Show up + give back</div>
+            {/* SILVER */}
+            <div className="sp-tier silver rv d1">
+              <Star tone="#B7A8AC" label="Silver tier" />
+              <div className="sp-tier-name">Silver Sponsor</div>
+              <div className="sp-tier-price">$3,500</div>
+              <div className="sp-tier-tag">Brand presence + full-event activation</div>
               <p className="sp-tier-sub">
-                Support the summit and put your brand on a moment attendees actually touch.
+                Get in front of women-led operators and investors with a presence woven through the
+                whole event.
               </p>
               <ul className="sp-tier-list">
+                <li>Banner and exhibit table at the event</li>
+                <li>Logo placement on all promotional materials</li>
+                <li>Logo recognition throughout the event</li>
+                <li>Featured on the event website and in event email marketing</li>
                 <li>
-                  Sponsor one attendee touchpoint — e.g. goodie basket, coffee &amp; refreshment
-                  station, lanyard/badge, wifi, or notebooks
+                  Dedicated social media feature across Facebook page, Facebook group, and Instagram
                 </li>
-                <li>&ldquo;Sponsored by&rdquo; signage at your touchpoint</li>
-                <li>Logo on the event website sponsor list</li>
-                <li>Logo recognition in the on-site sponsor display</li>
+                <li>Dedicated email feature to attendees after the event</li>
                 <li>
-                  One event pass at <strong>50% off ($200)</strong>
+                  <strong>2 complimentary event passes</strong>
                 </li>
+                <li>Promotional item included in the attendee gift bags</li>
+                <li>Attendee registration list (opt-in only) for post-event outreach</li>
               </ul>
-              <p className="sp-tier-note">
-                No booth, speaking slot, or dedicated social/email feature — those start at Silver.
-              </p>
             </div>
 
             {/* GOLD (highlighted, center) */}
@@ -134,31 +135,30 @@ export default function SponsorPartnersPage() {
               </ul>
             </div>
 
-            {/* SILVER */}
-            <div className="sp-tier silver rv d3">
-              <Star tone="#B7A8AC" label="Silver tier" />
-              <div className="sp-tier-name">Silver Sponsor</div>
-              <div className="sp-tier-price">$3,500</div>
-              <div className="sp-tier-tag">Brand presence + full-event activation</div>
+            {/* BRONZE */}
+            <div className="sp-tier bronze rv d3">
+              <Star tone="#A9774B" label="Bronze tier" />
+              <div className="sp-tier-name">Bronze Sponsor</div>
+              <div className="sp-tier-price">$750</div>
+              <div className="sp-tier-tag">Show up + give back</div>
               <p className="sp-tier-sub">
-                Get in front of women-led operators and investors with a presence woven through the
-                whole event.
+                Support the summit and put your brand on a moment attendees actually touch.
               </p>
               <ul className="sp-tier-list">
-                <li>Banner and exhibit table at the event</li>
-                <li>Logo placement on all promotional materials</li>
-                <li>Logo recognition throughout the event</li>
-                <li>Featured on the event website and in event email marketing</li>
                 <li>
-                  Dedicated social media feature across Facebook page, Facebook group, and Instagram
+                  Sponsor one attendee touchpoint — e.g. goodie basket, coffee &amp; refreshment
+                  station, lanyard/badge, wifi, or notebooks
                 </li>
-                <li>Dedicated email feature to attendees after the event</li>
+                <li>&ldquo;Sponsored by&rdquo; signage at your touchpoint</li>
+                <li>Logo on the event website sponsor list</li>
+                <li>Logo recognition in the on-site sponsor display</li>
                 <li>
-                  <strong>2 complimentary event passes</strong>
+                  One event pass at <strong>50% off ($200)</strong>
                 </li>
-                <li>Promotional item included in the attendee gift bags</li>
-                <li>Attendee registration list (opt-in only) for post-event outreach</li>
               </ul>
+              <p className="sp-tier-note">
+                No booth, speaking slot, or dedicated social/email feature — those start at Silver.
+              </p>
             </div>
           </div>
         </div>
