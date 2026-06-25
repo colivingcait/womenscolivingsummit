@@ -70,6 +70,92 @@ export default function SponsorsPage() {
         </div>
       </section>
 
+      <section className="tiers">
+        <div className="si">
+          <div className="rv">
+            <div className="ey ey-c">Partnership Levels</div>
+            <h2>Find the right <em>fit.</em></h2>
+            <p>
+              Three ways to partner with WCS 2026 — each built to put your brand in front of women
+              who are actively building coliving portfolios. Custom packages are always welcome.
+            </p>
+          </div>
+          <div className="tiers-grid">
+            {/*
+              To show real pricing, replace `price: 'Contact for pricing'` with the dollar amount
+              (e.g. price: '$1,500') and adjust `priceNote` for each tier below.
+            */}
+            {[
+              {
+                name: 'Bronze',
+                role: 'Community Partner',
+                price: 'Contact for pricing',
+                priceNote: 'Get in front of the room',
+                featured: false,
+                benefits: [
+                  'Logo on event signage & website',
+                  'Social media feature to our audience',
+                  '2 summit tickets',
+                  'Inclusion in attendee welcome materials',
+                ],
+              },
+              {
+                name: 'Gold',
+                role: 'Featured Partner',
+                price: 'Contact for pricing',
+                priceNote: 'Our most popular package',
+                featured: true,
+                benefits: [
+                  'Everything in Bronze',
+                  'Stage introduction & verbal recognition',
+                  'Exhibitor table in the networking space',
+                  '4 summit tickets',
+                  'Logo on the main stage backdrop',
+                  'Year-round feature in the She Leads Coliving community',
+                ],
+              },
+              {
+                name: 'Presenting',
+                role: 'Title Partner',
+                price: 'Contact for pricing',
+                priceNote: 'Lead the summit — limited to one',
+                featured: false,
+                benefits: [
+                  'Everything in Gold',
+                  'Keynote & track co-branding',
+                  'Dedicated email feature to the full list',
+                  '6 summit tickets',
+                  'Speaking or panel opportunity',
+                  'First right of refusal for WCS 2027',
+                ],
+              },
+            ].map((tier, i) => (
+              <div
+                className={`tier-card rv d${i + 1}${tier.featured ? ' featured' : ''}`}
+                key={tier.name}
+              >
+                {tier.featured && <div className="tier-badge">Most Popular</div>}
+                <div className="tier-name">{tier.name}</div>
+                <div className="tier-role">{tier.role}</div>
+                <div className="tier-price">{tier.price}</div>
+                <div className="tier-price-note">{tier.priceNote}</div>
+                <ul className="tier-list">
+                  {tier.benefits.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+                <button className={`btn ${tier.featured ? 'btn-g' : 'btn-o'}`} onClick={openSponsor}>
+                  Become a Sponsor
+                </button>
+              </div>
+            ))}
+          </div>
+          <p className="tiers-foot rv">
+            Looking for something tailored? <a onClick={openSponsor}>Let&apos;s build a custom package.</a>
+          </p>
+        </div>
+      </section>
+
       <section className="past-sponsors">
         <div className="si">
           <div className="rv">
