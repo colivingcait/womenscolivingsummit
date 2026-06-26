@@ -85,6 +85,7 @@ export default function SponsorPartnersPage() {
           <div className="sp-grid">
             {/* SILVER */}
             <div className="sp-tier silver rv d1">
+              <div className="sp-badge alt">Only 7 spots available</div>
               <Star tone="#B7A8AC" label="Silver tier" />
               <div className="sp-tier-name">Silver Sponsor</div>
               <div className="sp-tier-price">$3,500</div>
@@ -127,7 +128,7 @@ export default function SponsorPartnersPage() {
                   A crowd-interaction opportunity — panel seat or breakout session — for real
                   conversation with attendees
                 </li>
-                <li>Premium front-of-room placement for your logo and banner</li>
+                <li>Priority booth selection</li>
                 <li>
                   1 additional complimentary event pass <strong>(3 total)</strong>
                 </li>
@@ -139,7 +140,7 @@ export default function SponsorPartnersPage() {
             <div className="sp-tier bronze rv d3">
               <Star tone="#A9774B" label="Bronze tier" />
               <div className="sp-tier-name">Bronze Sponsor</div>
-              <div className="sp-tier-price">$750</div>
+              <div className="sp-tier-price">$1,000</div>
               <div className="sp-tier-tag">Show up + give back</div>
               <p className="sp-tier-sub">
                 Support the summit and put your brand on a moment attendees actually touch.
@@ -149,11 +150,10 @@ export default function SponsorPartnersPage() {
                   Sponsor one attendee touchpoint — e.g. goodie basket, coffee &amp; refreshment
                   station, lanyard/badge, wifi, or notebooks
                 </li>
-                <li>&ldquo;Sponsored by&rdquo; signage at your touchpoint</li>
+                <li>Listed as a sponsor in the event program</li>
                 <li>Logo on the event website sponsor list</li>
-                <li>Logo recognition in the on-site sponsor display</li>
                 <li>
-                  One event pass at <strong>50% off ($200)</strong>
+                  <strong>One full event ticket included</strong>
                 </li>
               </ul>
               <p className="sp-tier-note">
@@ -169,7 +169,7 @@ export default function SponsorPartnersPage() {
         <div className="si rv">
           <div className="ey ey-c ey-l">Lock Your Category</div>
           <h2>
-            Category Exclusivity — <em>1.5× your tier</em>
+            Category <em>Exclusivity.</em>
           </h2>
           <p className="sp-excl-body">
             Want to be the only one in your category in the room? Lock exclusivity and no competing
