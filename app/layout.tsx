@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import { ModalProvider } from '@/components/ModalProvider';
+import { Banner } from '@/components/Banner';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { SponsorModal } from '@/components/SponsorModal';
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body>
         <ModalProvider>
+          <Banner />
           <Nav />
           {children}
           <Footer />
