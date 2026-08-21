@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useModals } from './ModalProvider';
+import { submitToCrm } from '../lib/crm';
 
 export function SpeakerModal() {
   const { speakerOpen, closeSpeaker } = useModals();
@@ -11,18 +12,24 @@ export function SpeakerModal() {
   const [exp, setExp] = useState('');
   const [topic, setTopic] = useState('');
   const [social, setSocial] = useState('');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle');
 
-  const submit = () => {
+  const submit = async () => {
     if (!name.trim() || !email.trim() || !exp.trim() || !topic.trim()) {
       alert('Please fill out your name, email, experience, and topic.');
       return;
     }
-    const subject = encodeURIComponent(`WCS 2026 Speaker Application — ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ''}\n\nColiving Experience:\n${exp}\n\nProposed Topic:\n${topic}${social ? `\n\nSocial/Website: ${social}` : ''}`
-    );
-    window.location.href = `mailto:Hello@LustraHouse.com?subject=${subject}&body=${body}`;
-    closeSpeaker();
+    setStatus('sending');
+    try {
+      await submitToCrm('speaker', {
+        email,
+        name,
+        fields: { Company: company, 'Coliving experience': exp, 'Proposed topic': topic, 'Social/website': social },
+      });
+      closeSpeaker();
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -63,7 +70,14 @@ export function SpeakerModal() {
           value={social}
           onChange={(e) => setSocial(e.target.value)}
         />
-        <button className="btn btn-g" onClick={submit}>Submit Application</button>
+        <button className="btn btn-g" onClick={submit} disabled={status === 'sending'}>
+          {status === 'sending' ? 'Sending…' : 'Submit Application'}
+        </button>
+        {status === 'error' && (
+          <p className="form-note">
+            Something went wrong — email us at <a href="mailto:Hello@LustraHouse.com">Hello@LustraHouse.com</a> instead.
+          </p>
+        )}
       </div>
     </div>
   );

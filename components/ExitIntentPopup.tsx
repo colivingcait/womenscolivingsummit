@@ -1,12 +1,14 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { submitToCrm } from '../lib/crm';
 
 export function ExitIntentPopup() {
   const [open, setOpen] = useState(false);
   const shownRef = useRef(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle');
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -20,17 +22,18 @@ export function ExitIntentPopup() {
     return () => document.removeEventListener('mouseout', handler);
   }, []);
 
-  const submit = () => {
+  const submit = async () => {
     if (!email) {
       alert('Please enter your email address.');
       return;
     }
-    const subject = encodeURIComponent('WCS 2026 — New Email Signup (Exit Intent)');
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nThis person signed up for WCS 2026 updates via the exit-intent popup.`
-    );
-    window.location.href = `mailto:Hello@LustraHouse.com?subject=${subject}&body=${body}`;
-    setOpen(false);
+    setStatus('sending');
+    try {
+      await submitToCrm('exit_intent', { email, name });
+      setOpen(false);
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -49,8 +52,15 @@ export function ExitIntentPopup() {
         <div className="exit-form">
           <input type="text" placeholder="First name" value={name} onChange={(e) => setName(e.target.value)} />
           <input type="email" placeholder="Email address" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <button onClick={submit}>Keep Me Posted</button>
+          <button onClick={submit} disabled={status === 'sending'}>
+            {status === 'sending' ? 'Sending…' : 'Keep Me Posted'}
+          </button>
         </div>
+        {status === 'error' && (
+          <p className="form-note">
+            Something went wrong — email us at <a href="mailto:Hello@LustraHouse.com">Hello@LustraHouse.com</a> instead.
+          </p>
+        )}
         <button className="exit-skip" onClick={() => setOpen(false)}>
           No thanks, I&apos;ll find my own way back
         </button>

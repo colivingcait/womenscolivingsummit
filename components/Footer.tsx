@@ -3,24 +3,28 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useModals } from './ModalProvider';
+import { submitToCrm } from '../lib/crm';
 
 export function Footer() {
   const { openSponsor, openSpeaker } = useModals();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
-  const submit = () => {
+  const submit = async () => {
     if (!email) {
       alert('Please enter your email address.');
       return;
     }
-    const subject = encodeURIComponent('WCS 2026 — New Email Signup');
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nThis person signed up for WCS 2026 updates via the website footer.`
-    );
-    window.location.href = `mailto:Hello@LustraHouse.com?subject=${subject}&body=${body}`;
-    setName('');
-    setEmail('');
+    setStatus('sending');
+    try {
+      await submitToCrm('newsletter', { email, name });
+      setStatus('sent');
+      setName('');
+      setEmail('');
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -76,8 +80,17 @@ export function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button onClick={submit}>Count Me In</button>
+            <button onClick={submit} disabled={status === 'sending'}>
+              {status === 'sending' ? 'Sending…' : 'Count Me In'}
+            </button>
           </div>
+          {status === 'sent' && <p className="form-note">🎉 You&apos;re on the list!</p>}
+          {status === 'error' && (
+            <p className="form-note">
+              Something went wrong — email us at{' '}
+              <a href="mailto:Hello@LustraHouse.com">Hello@LustraHouse.com</a> instead.
+            </p>
+          )}
         </div>
         <div className="fbot">
           <span>© 2026 Women&apos;s Coliving Summit. All rights reserved.</span>

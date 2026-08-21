@@ -707,6 +707,17 @@ window.addEventListener('message',function(e){
 document.getElementById('eb2').addEventListener('click',function(){fireworkBurst(3,200)});
 </script>
 <script>
+// Posts a form submission to Caitlyn's CRM. Fire-and-forget - never blocks
+// the page's own UI flow (invite link, sms/email share buttons) on the
+// network call, and never throws into the caller.
+function submitToCrm(form,data){
+  fetch('https://crm.callcaitlyn.com/api/webhooks/site-form',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(Object.assign({site:'womens_coliving_summit',form:form},data))
+  }).catch(function(){});
+}
+
 // ═══ GOLD RAIN ═══
 const rn=document.getElementById('rain');
 for(let i=0;i<90;i++){const p=document.createElement('i');const s=2+Math.random()*5;p.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;animation-duration:${8+Math.random()*14}s;animation-delay:${Math.random()*10}s`;rn.appendChild(p)}
@@ -978,10 +989,8 @@ document.getElementById('ecForm').addEventListener('submit',function(e){
     else document.getElementById('ecEmail').focus();
     return;
   }
-  // TODO: wire up to real signup endpoint (Mailchimp / ConvertKit / Formspree).
-  // For now we capture locally so nothing is lost during launch.
   try{localStorage.setItem('ncc_explore_signup',JSON.stringify({name,email,ts:Date.now()}))}catch(_){}
-  console.log('NCC explore-signup captured:',{name,email});
+  submitToCrm('explore_signup',{email:email,name:name});
   location.href='/';
 });
 
@@ -994,11 +1003,8 @@ document.getElementById('referForm').addEventListener('submit',function(e){
   if(!from){document.getElementById('refFrom').focus();return}
   if(!forName){document.getElementById('refFor').focus();return}
   if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){document.getElementById('refEmail').focus();return}
-  // TODO: wire to Kit (ConvertKit) form / API so Kit fires the auto-email
-  //       sequence delivering the personalized invite to the friend.
-  //       Suggested fields: friend_name, friend_email, referrer_name.
   try{const r=JSON.parse(localStorage.getItem('wcs_referrals')||'[]');r.push({from,forName,email,ts:Date.now()});localStorage.setItem('wcs_referrals',JSON.stringify(r))}catch(_){}
-  console.log('WCS referral captured (stub — wire Kit here):',{from,forName,email});
+  submitToCrm('referral',{email:email,name:forName,fields:{'Referred by':from}});
   const url=`${location.origin}/invite?from=${encodeURIComponent(from)}&for=${encodeURIComponent(forName)}`;
   document.getElementById('refFriendNameOut').textContent=forName;
   document.getElementById('refLink').value=url;

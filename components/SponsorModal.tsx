@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useModals } from './ModalProvider';
+import { submitToCrm } from '../lib/crm';
 
 export function SponsorModal() {
   const { sponsorOpen, closeSponsor } = useModals();
@@ -10,18 +11,20 @@ export function SponsorModal() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [msg, setMsg] = useState('');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle');
 
-  const submit = () => {
+  const submit = async () => {
     if (!name.trim() || !company.trim() || !email.trim()) {
       alert('Please fill out your name, company, and email.');
       return;
     }
-    const subject = encodeURIComponent(`WCS 2026 Sponsor Inquiry — ${company}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nCompany: ${company}\nEmail: ${email}${phone ? `\nPhone: ${phone}` : ''}\n\n${msg}`
-    );
-    window.location.href = `mailto:Hello@LustraHouse.com?subject=${subject}&body=${body}`;
-    closeSponsor();
+    setStatus('sending');
+    try {
+      await submitToCrm('sponsor', { email, name, phone, message: msg, fields: { Company: company } });
+      closeSponsor();
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -51,7 +54,14 @@ export function SponsorModal() {
           value={msg}
           onChange={(e) => setMsg(e.target.value)}
         />
-        <button className="btn btn-g" onClick={submit}>Send Inquiry</button>
+        <button className="btn btn-g" onClick={submit} disabled={status === 'sending'}>
+          {status === 'sending' ? 'Sending…' : 'Send Inquiry'}
+        </button>
+        {status === 'error' && (
+          <p className="form-note">
+            Something went wrong — email us at <a href="mailto:Hello@LustraHouse.com">Hello@LustraHouse.com</a> instead.
+          </p>
+        )}
       </div>
     </div>
   );
