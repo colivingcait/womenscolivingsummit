@@ -70,6 +70,18 @@ export default function Home() {
 
   return (
     <>
+      {/* CANCELLED OVERLAY */}
+      <div className="cancel-ov" role="alert" aria-live="assertive">
+        <div className="cancel-ov-i">
+          <span className="cancel-ov-k">Important Announcement</span>
+          <h1 className="cancel-ov-t">This Event Has Been <em>Cancelled</em></h1>
+          <p className="cancel-ov-s">
+            The Women&apos;s Coliving Summit will no longer take place. We&apos;re
+            deeply grateful for your support — thank you for being part of this community.
+          </p>
+        </div>
+      </div>
+
       {/* HERO */}
       <section className="hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
