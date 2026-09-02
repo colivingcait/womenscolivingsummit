@@ -70,6 +70,18 @@ export default function Home() {
 
   return (
     <>
+      {/* CANCELLED OVERLAY */}
+      <div className="cancel-ov" role="alert" aria-live="assertive">
+        <div className="cancel-ov-i">
+          <span className="cancel-ov-k">Important Announcement</span>
+          <h1 className="cancel-ov-t">This Event Has Been <em>Cancelled</em></h1>
+          <p className="cancel-ov-s">
+            The Women&apos;s Coliving Summit will no longer take place. We&apos;re
+            deeply grateful for your support — thank you for being part of this community.
+          </p>
+        </div>
+      </div>
+
       {/* HERO */}
       <section className="hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -78,11 +90,6 @@ export default function Home() {
         <div className="hero-spk" />
         <div className="grn-wrap" />
         <div className="hero-i">
-          <div className="hero-note" role="alert">
-            <span className="hero-note-k">Event Postponed</span>
-            <p className="hero-note-t">The Women&apos;s Coliving Summit has unfortunately been <em>postponed.</em></p>
-            <p className="hero-note-s">Thank you for your patience — we&apos;ll share a new date here soon.</p>
-          </div>
           <div className="ey ey-c" style={{ opacity: 0, animation: 'hr .8s cubic-bezier(.16,1,.3,1) .05s forwards' }}>
             October 16 – 17, 2026 · Atlanta, Georgia
           </div>
